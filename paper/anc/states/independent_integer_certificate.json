@@ -1,0 +1,170 @@
+{
+  "n": 16,
+  "lambda": "1/4",
+  "exact_loss": "59769890273/3814697265625 - 33752000128*sqrt(2)/3814697265625",
+  "loss_decimal": "0.0031555201098747635116511686646453014",
+  "blocks": [
+    {
+      "flag_level": 2,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 3
+    },
+    {
+      "flag_level": 3,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 29
+    },
+    {
+      "flag_level": 4,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 132
+    },
+    {
+      "flag_level": 5,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 421
+    },
+    {
+      "flag_level": 6,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 986
+    },
+    {
+      "flag_level": 7,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 1755
+    },
+    {
+      "flag_level": 8,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 2421
+    },
+    {
+      "flag_level": 9,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 2612
+    },
+    {
+      "flag_level": 10,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 2206
+    },
+    {
+      "flag_level": 11,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 1450
+    },
+    {
+      "flag_level": 12,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 729
+    },
+    {
+      "flag_level": 13,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 272
+    },
+    {
+      "flag_level": 14,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 71
+    },
+    {
+      "flag_level": 15,
+      "magic_offsets": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "blocks": 12
+    }
+  ],
+  "unused_counts": [
+    1,
+    4,
+    1,
+    3,
+    4,
+    3,
+    2,
+    1,
+    1,
+    4,
+    2,
+    2,
+    3,
+    4,
+    1,
+    4,
+    1
+  ],
+  "covered_vectors": 65495,
+  "all_capacities_exactly_feasible": true,
+  "quadratic_matrix": "Matrix([[2, -sqrt(2)/4, -sqrt(2)/4, -sqrt(2)/4, -sqrt(2)/4], [-sqrt(2)/4, 45/8, -3/2, -19/8, -3/2], [-sqrt(2)/4, -3/2, 45/8, -3/2, -19/8], [-sqrt(2)/4, -19/8, -3/2, 45/8, -3/2], [-sqrt(2)/4, -3/2, -19/8, -3/2, 45/8]])"
+}

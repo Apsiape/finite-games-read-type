@@ -1,0 +1,259 @@
+\begin{thebibliography}{10}
+
+\bibitem{Graph}
+A.~an~Huef, M.~Laca, I.~Raeburn, and A.~Sims.
+\newblock {KMS} states on the {$C^*$}-algebras of finite graphs.
+\newblock \url{https://arxiv.org/abs/1205.2194}, 2013.
+\newblock Primary source.
+
+\bibitem{AH}
+H.~Ando and U.~Haagerup.
+\newblock Ultraproducts of von {Neumann} algebras.
+\newblock \url{https://arxiv.org/abs/1212.5457}, 2014.
+\newblock Primary source.
+
+\bibitem{Cabello}
+A.~Cabello, J.~M. Estebaranz, and G.~Garcia-Alcaine.
+\newblock Bell--kochen--specker theorem: A proof with 18 vectors.
+\newblock \url{https://arxiv.org/abs/quant-ph/9706009}, 1997.
+\newblock Primary source.
+
+\bibitem{CLPW}
+V.~Chandrasekaran, R.~Longo, G.~Penington, and E.~Witten.
+\newblock An algebra of observables for de {Sitter} space.
+\newblock \url{https://arxiv.org/abs/2206.10780v5}, 2023.
+\newblock Primary source.
+
+\bibitem{CPW}
+V.~Chandrasekaran, G.~Penington, and E.~Witten.
+\newblock Large {$N$} algebras and generalized entropy.
+\newblock \url{https://arxiv.org/abs/2209.10454}, 2023.
+\newblock Primary source.
+
+\bibitem{CLS}
+R.~Cleve, L.~Liu, and W.~Slofstra.
+\newblock Perfect commuting-operator strategies for linear system games.
+\newblock \url{https://arxiv.org/abs/1606.02278}, 2016.
+
+\bibitem{Coladangelo}
+A.~Coladangelo.
+\newblock A two-player dimension witness based on embezzlement, and an
+  elementary proof of the non-closure of the set of quantum correlations.
+\newblock \url{https://arxiv.org/abs/1904.02350}, 2020.
+\newblock Primary source.
+
+\bibitem{Connes}
+A.~Connes.
+\newblock Une classification des facteurs de type {III}.
+\newblock \url{https://doi.org/10.24033/asens.1247}, 1973.
+\newblock Primary source.
+
+\bibitem{Connes76}
+A.~Connes.
+\newblock Classification of injective factors: Cases {II$_1$}, {II$_\infty$},
+  {III$_\lambda$}, $\lambda\ne1$.
+\newblock \url{https://annals.math.princeton.edu/1976/104-1/p04}, 1976.
+\newblock Primary source.
+
+\bibitem{CS}
+A.~Connes and E.~St{\o}rmer.
+\newblock Homogeneity of the state space of factors of type {III$_1$}.
+\newblock \url{https://doi.org/10.1016/0022-1236(78)90085-X}, 1978.
+\newblock Primary source.
+
+\bibitem{CK}
+J.~Cuntz and W.~Krieger.
+\newblock A class of {$C^*$}-algebras and topological {Markov} chains.
+\newblock \url{https://doi.org/10.1007/BF01390048}, 1980.
+\newblock Primary source.
+
+\bibitem{Base}
+S.~Douglas and N.~Mghirbi.
+\newblock Perfect play in a binary-scoring nonlocal game requires infinite
+  dimension but only finite energy.
+\newblock \url{https://doi.org/10.5281/zenodo.23772890}, 2026.
+\newblock Version 2.0.0. Preprint.
+
+\bibitem{Precision}
+S.~Douglas and N.~Mghirbi.
+\newblock The price of precision: usable entanglement in nonlocal games and the
+  geometry of groups.
+\newblock \url{https://doi.org/10.5281/zenodo.23753349}, 2026.
+\newblock Preprint.
+
+\bibitem{Uncomputable}
+S.~Douglas and N.~Mghirbi.
+\newblock The uncomputable price of precision.
+\newblock \url{https://doi.org/10.5281/zenodo.23753741}, 2026.
+\newblock Version 4.0.0. Preprint.
+
+\bibitem{FK}
+T.~Fack and H.~Kosaki.
+\newblock Generalized $s$-numbers of $\tau$-measurable operators.
+\newblock \url{https://msp.org/pjm/1986/123-2/pjm-v123-n2-p03-s.pdf}, 1986.
+\newblock Primary source.
+
+\bibitem{GYZ}
+M.~Gao, T.~Yu, and L.~Zhi.
+\newblock An explicit counterexample to {Tsirelson}'s problem via a linear
+  system game.
+\newblock \url{https://arxiv.org/abs/2610.10248v2}, 2026.
+
+\bibitem{Conference}
+J.-M. Goethals and J.~J. Seidel.
+\newblock Orthogonal matrices with zero diagonal.
+\newblock {\em Canadian Journal of Mathematics}, 19:1001--1010, 1967.
+\newblock Section 2, Theorem 2.1: the classical Paley conference matrices.
+
+\bibitem{Haagerup}
+U.~Haagerup.
+\newblock On the uniqueness of injective {III$_1$} factor.
+\newblock \url{https://arxiv.org/abs/1606.03156}, 2016.
+\newblock Primary source.
+
+\bibitem{HM}
+U.~Haagerup and M.~Musat.
+\newblock Classification of hyperfinite factors up to completely bounded
+  isomorphism of their preduals.
+\newblock \url{https://arxiv.org/abs/0706.3463}, 2009.
+\newblock Primary source.
+
+\bibitem{HS}
+U.~Haagerup and E.~St{\o}rmer.
+\newblock Equivalence of normal states on von {Neumann} algebras and the flow
+  of weights.
+\newblock \url{https://doi.org/10.1016/0001-8708(90)90078-2}, 1990.
+\newblock Primary source.
+
+\bibitem{Harris}
+S.~J. Harris.
+\newblock Self-testing for exact entanglement embezzlement.
+\newblock \url{https://arxiv.org/abs/2605.22713v2}, 2026.
+\newblock Primary source.
+
+\bibitem{JSS}
+K.~Jensen, J.~Sorce, and A.~J. Speranza.
+\newblock Generalized entropy for general subregions in quantum gravity.
+\newblock \url{https://arxiv.org/abs/2306.01837}, 2023.
+\newblock Primary source.
+
+\bibitem{JLV}
+Z.~Ji, D.~Leung, and T.~Vidick.
+\newblock A three-player coherent state embezzlement game.
+\newblock \url{https://arxiv.org/abs/1802.04926}, 2018.
+
+\bibitem{JNVWY}
+Z.~Ji, A.~Natarajan, T.~Vidick, J.~Wright, and H.~Yuen.
+\newblock {$\mathrm{MIP}^*=\mathrm{RE}$}.
+\newblock \url{https://arxiv.org/abs/2001.04383}, 2020.
+\newblock Primary source.
+
+\bibitem{Tensor}
+Z.~Ji, A.~Natarajan, T.~Vidick, J.~Wright, and H.~Yuen.
+\newblock Quantum soundness of testing tensor codes.
+\newblock
+  \url{https://people.eecs.berkeley.edu/~jswright/papers/tensor-codes.pdf},
+  2022.
+\newblock Primary source.
+
+\bibitem{KFLS}
+J.~Kudler-Flam, S.~Leutheusser, and G.~Satishchandran.
+\newblock Generalized black hole entropy is von {Neumann} entropy.
+\newblock \url{https://arxiv.org/abs/2309.15897v6}, 2024.
+\newblock Primary source.
+
+\bibitem{LTW}
+D.~Leung, B.~Toner, and J.~Watrous.
+\newblock Coherent state exchange in multi-prover quantum interactive proof
+  systems.
+\newblock
+  \url{https://cs.uwaterloo.ca/~watrous/Papers/CoherentStateExchange.pdf},
+  2013.
+\newblock Primary source.
+
+\bibitem{Lin}
+J.~Lin.
+\newblock {$\mathsf{MIP}^{co}=\mathsf{coRE}$}.
+\newblock \url{https://arxiv.org/abs/2510.07162}, 2025.
+
+\bibitem{FMS}
+L.~Man{\v c}inska.
+\newblock The right entanglement for perfect nonlocality and zero-error
+  communication.
+\newblock \url{https://arxiv.org/abs/2610.06512v1}, 2026.
+\newblock Primary source.
+
+\bibitem{Explicit}
+N.~Mghirbi and S.~Douglas.
+\newblock An explicit nonlocal game of quantum value one that needs exponential
+  entanglement.
+\newblock \url{https://doi.org/10.5281/zenodo.23697255}, 2026.
+\newblock Preprint.
+
+\bibitem{MNY}
+H.~Mousavi, S.~S. Nezhadi, and H.~Yuen.
+\newblock Nonlocal games, compression theorems, and the arithmetical hierarchy.
+\newblock \url{https://arxiv.org/abs/2110.04651}, 2021.
+\newblock Theorems 6.4 and 6.9 in the cited version.
+
+\bibitem{NPA}
+M.~Navascu{\'e}s, S.~Pironio, and A.~Ac{\'i}n.
+\newblock A convergent hierarchy of semidefinite programs characterizing the
+  set of quantum correlations.
+\newblock \url{https://arxiv.org/abs/0803.4290}, 2008.
+
+\bibitem{PT}
+G.~K. Pedersen and M.~Takesaki.
+\newblock The {Radon--Nikodym} theorem for von {Neumann} algebras.
+\newblock \url{https://doi.org/10.1007/BF02392262}, 1973.
+\newblock Primary source.
+
+\bibitem{SloEmbedding}
+W.~Slofstra.
+\newblock Tsirelson's problem and an embedding theorem for groups arising from
+  non-local games.
+\newblock \url{https://arxiv.org/abs/1606.03140}, 2016.
+
+\bibitem{SloNonclosure}
+W.~Slofstra.
+\newblock The set of quantum correlations is not closed.
+\newblock \url{https://arxiv.org/abs/1703.08618}, 2017.
+
+\bibitem{SV}
+W.~Slofstra and T.~Vidick.
+\newblock Entanglement in non-local games and the hyperlinear profile of
+  groups.
+\newblock \url{https://arxiv.org/abs/1711.10676v2}, 2018.
+
+\bibitem{Takesaki}
+M.~Takesaki.
+\newblock Conditional expectations in von {Neumann} algebras.
+\newblock \url{https://doi.org/10.1016/0022-1236(72)90004-3}, 1972.
+\newblock Primary source.
+
+\bibitem{VLSWW}
+L.~van Luijk, A.~Stottmeister, R.~F. Werner, and H.~Wilming.
+\newblock Embezzlement of entanglement, quantum fields, and the classification
+  of von {Neumann} algebras.
+\newblock \url{https://arxiv.org/abs/2401.07299v4}, 2024.
+\newblock Primary source.
+
+\bibitem{Witten}
+E.~Witten.
+\newblock Gravity and the crossed product.
+\newblock \url{https://arxiv.org/abs/2112.12828v5}, 2022.
+\newblock Primary source.
+
+\bibitem{Zagier}
+D.~Zagier.
+\newblock A one-sentence proof that every prime $p\equiv1\pmod4$ is a sum of
+  two squares.
+\newblock {\em American Mathematical Monthly}, 97(2):144, 1990.
+
+\bibitem{ZTG}
+E.~Zanoni, T.~Theurer, and G.~Gour.
+\newblock Complete characterization of entanglement embezzlement.
+\newblock \url{https://arxiv.org/abs/2303.17749}, 2024.
+\newblock Primary source.
+
+\end{thebibliography}

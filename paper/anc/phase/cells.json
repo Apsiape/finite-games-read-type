@@ -1,0 +1,9 @@
+{
+  "columns": ["B", "L", "P", "SPE", "E", "gap"],
+  "rows": {
+    "finite": ["filled", "empty", "empty", "empty", "empty", "empty"],
+    "I_infinity": ["empty", "filled", "open", "open", "open", "empty"],
+    "II": ["empty", "open", "filled", "open", "filled", "filled"],
+    "III_only": ["empty", "open", "open", "open", "filled", "filled"]
+  }
+}

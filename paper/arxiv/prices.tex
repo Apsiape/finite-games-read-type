@@ -1,0 +1,252 @@
+\section{The price of approximate play}\label{sec:prices}
+All entropies in this section use natural logarithms. Each optimized cost at accuracy $\eps$ is an infimum over the specified strategies with loss at most $\eps$. For type I, $S(h)=-\Tr(h\ln h)$ is marginal entropy. For a normalized finite trace $\tau(1)=\tau(h)=1$, the deficit is $D_\tau(h)=\tau(h\ln h)$. For a chosen semifinite trace let $T$ have law $p(t)dt$, $p(t)=\mu_t(h)$, and put $X=\log_2T$. Trace rescaling translates $X$ and leaves its variance and $H$ unchanged in a factor. In a nonfactor, global rearrangement can lose central information; the inequality below still holds for the chosen trace.
+
+\subsection{A robust gluing theorem}
+Theorem 7.2 of the companion base-game paper \cite{Base} supplies a universal finite constant $C_F$ for the flagged sector estimate, stated in the form needed here. For a projective spatial realization of one FMS copy, with flag $F$ and unweighted internal forbidden mass $N$, its sorted Schmidt-amplitude lists satisfy
+\begin{equation}\label{eq:sector}
+ \bigl\|\operatorname{Sch}((1-F)\psi)
+       -4\mathbin{\times}\sqrt2\operatorname{Sch}(F\psi)\bigr\|_2
+ \le C_F\sqrt N.
+\end{equation}
+Here $k\mathbin{\times}\Lambda$ means the sorted union of $k$ copies of a list, padded by zeros. The estimate is homogeneous in unnormalized vectors, includes arbitrary multiplicity, and uses the unweighted sum of the 25 forbidden masses. The companion proof uses the order-32 Pauli-group extraction and bounded words of length at most six; its estimates use no finite-rank cutoff. We do not give a validated numerical upper bound for $C_F$ here. We give the additional nine-copy gluing argument in full.
+
+Purify a mixed strategy on Bob's side; a common Naimark dilation with pure input registers makes the finitely many POVMs projective without changing Alice's nonzero spectrum. Let $\Lambda=\operatorname{Sch}(\psi)$ and
+\[
+ D(\Lambda)=\|2\mathbin{\times}\Lambda-\sqrt2\Lambda\|_2,
+ \qquad H^2=D(\Lambda)^2/2.
+\]
+The identity follows by integration of the type-I step density. Pure local ancillas and the common amplification $h\mapsto I_9/9\otimes h$ preserve $H$.
+
+Let $Q_j$ be Bob's label projections and $F_j$ Alice's copy flags. Set $d_j=\|(F_j-Q_j)\psi\|$, $N_L=\sum_jd_j^2$ and $N_F=\sum_jN_j$. The first links test exactly these mismatches, so their disjoint loss budgets give
+\begin{equation}\label{eq:budgets}
+ N_F+N_L\le243\eps.
+\end{equation}
+No commutation between the $F_j$ is assumed. For any ordering define the sequential instrument
+\[
+ T_r=F_r(1-F_{r-1})\cdots(1-F_1),\qquad
+ T_{\rm fail}=(1-F_9)\cdots(1-F_1).
+\]
+Telescoping gives $\sum_rT_r^*T_r+T_{\rm fail}^*T_{\rm fail}=1$. Replace the rightmost remaining Alice factor on $\psi$ by its Bob counterpart, and commute that factor to the left. Orthogonality of the $Q_j$ gives
+\[
+ \|(T_r-Q_r)\psi\|\le\sum_{i\le r}d_i,\qquad
+ \|T_{\rm fail}\psi\|\le\sum_id_i.
+\]
+Attach the sequential register on Alice and the exact label register on Bob. For $B=\sum_{j\in I}Q_j$, the target is $\sum_{j\in I}Q_j\psi\otimes|j,j\rangle$, a two-sided orthogonal sum. Squaring over register entries gives error squared at most
+\[
+ \sum_{r=1}^9\Bigl(\sum_{i\le r}d_i\Bigr)^2+
+ \Bigl(\sum_id_i\Bigr)^2\le54N_L.
+\]
+Local isometries preserve Schmidt amplitudes, and singular-value contraction gives
+\[
+ \left\|\operatorname{Sch}(B\psi)
+       -\bigcup_{j\in I}\operatorname{Sch}(Q_j\psi)\right\|_2
+ \le\sqrt{54N_L}.
+\]
+Write $S_j=\operatorname{Sch}(Q_j\psi)$ and $U=\bigcup_jS_j$. Replacing $F_j$ by $Q_j$ in \eqref{eq:sector}, and splitting its complement, gives
+\[
+ \left\|\bigcup_{k\ne j}S_k-4\mathbin{\times}\sqrt2S_j\right\|_2
+ \le C_F\sqrt{N_j}+(1+2\sqrt2)d_j+\sqrt{54N_L}.
+\]
+Concatenate and rearrange the nine comparisons. Each $S_k$ occurs eight times on the left and four times on the right. Hence
+\[
+ 2D(U)\le C_F\sqrt{N_F}+(1+2\sqrt2+3\sqrt{54})\sqrt{N_L}.
+\]
+Also $\|\Lambda-U\|_2\le\sqrt{54N_L}$. Since $D$ is $2\sqrt2$-Lipschitz,
+\[
+ D(\Lambda)\le\tfrac{C_F}{2}\sqrt{N_F}+c_L\sqrt{N_L},\qquad
+ c_L=\frac{1+2\sqrt2+3\sqrt{54}}2+2\sqrt{108},\quad c_L^2<1138.
+\]
+Cauchy--Schwarz with the disjoint budgets \eqref{eq:budgets} proves $H^2\le C_R\eps$ with the constant of Theorem~\ref{thm:price}. Only the first links entered; deleting the nine second links and renormalizing changes 243 to 234.
+
+\paragraph{Semifinite implementation.}
+After support reduction write the standard vector as $\zeta=h^{1/2}\in L^2(M,\Tr)$. Bob acts by right multiplication. Naimark is performed after compression: for a POVM column $W$ with $W^*W=e_{11}$, the block unitary
+\[
+ \begin{pmatrix}W&1-WW^*\\1-W^*W&W^*\end{pmatrix}
+\]
+implements its dilation after putting the unused second block into one outcome. Use unnormalized matrix traces, and embed $\zeta$ in one input corner. Thus its singular-value distribution is unchanged.
+
+With $r$ left and $c$ right register entries, vectors are $r\times c$ matrices over $L^2(M)$, regarded as rectangular measurable operators in a linking algebra. Left column isometries and right row isometries preserve their nonzero singular distributions. Contractive multiplication decreases $\mu_t$; two-sided orthogonal sums add distribution functions. The generalized trace inequality \cite[Lemma 2.5 and Theorem 4.2]{FK} gives
+\[
+ \operatorname{Re}\Tr(y^*x)\le\int\mu_t(x)\mu_t(y)\,dt,
+ \qquad \|\mu(x)-\mu(y)\|_2\le\|x-y\|_2.
+\]
+Truncation extends these statements to all $L^2$ elements. The extraction used in \eqref{eq:sector} is a finite column of bounded physical words and a finite group-register change of basis. Its common-invariant register projection is $|\Phi_4\rangle\langle\Phi_4|$; its range is $(I_4/2)\otimes j$, giving four copies of $\mu(j)/2$. The row/column rank-one product contributes $\mu(j)/(2\sqrt2)$. These are exactly the spectral operations in the square-root extraction and sector argument. Replacing Schmidt lists by rectangular singular distributions therefore transfers \eqref{eq:sector} with a universal finite constant, and every step of the sequential proof, without a matrix approximation assumption on $M$.
+
+If Bob is the semifinite party, standardize his marginal, put the label on the left and the flags on the right, and take adjoints of rectangular coefficient operators. The identity $\mu(x)=\mu(x^*)$ preserves the argument. The game need not be symmetric under exchange of question sets. This proves the either-party form of the robust theorem.
+
+\subsection{The exchange identity and the exact converse}
+For a pure spatial vector, adjoining a Bell pair replaces its Schmidt list by $(2\mathbin{\times}\Lambda)/\sqrt2$. Spectral alignment attains the maximum overlap, so
+\begin{equation}\label{eq:exchange}
+ \inf_{U,V}\|(U\otimes V)\psi-\psi\otimes\Phi_2\|^2=H(h)^2.
+\end{equation}
+Kernels are padded by local pure ancillas. This is the usual Schmidt-overlap calculation; related pure-state conversion machinery appears in \cite{ZTG}. In a general semifinite representation singular-value contraction proves only the lower inequality for allowed maps. It supplies no operational upper bound for a smaller physical partner. In a standard full-commutant semifinite \emph{factor}, equality holds as an infimum: approximate both coefficient operators in $L^2$ by finite spectral step operators, split equal-trace spectral projections, and align their left and right supports by partial isometries. Equal-trace projections and their complements are equivalent in a finite factor; in an infinite factor first use finite-trace corners and then complete the infinite complements. The step approximants attain the rearranged overlap and $L^2$ convergence gives infimum $H^2$. Attainment for diffuse data is not asserted. This permits error at most $C_R\eps+\delta$ for every $\delta>0$ in that full-partner model. In a nonfactor, central labels can obstruct such alignment, so global rearrangement alone does not give this operational equality.
+
+There is a profile-by-profile converse. On $\ell^2(\N)$ use $s_1|n\rangle=|2n-1\rangle$ and $s_2|n\rangle=|2n\rangle$. They are genuine Cuntz isometries, including the fixed point of $s_1$ at $n=1$. For a sorted probability density with amplitudes $\Lambda_n$, put it in the amplified marginal $I_9/9\otimes h$. The five-block construction has diagonal coefficients
+\[
+ (\Lambda_m,\Lambda_{\lceil m/2\rceil},\ldots,
+                 \Lambda_{\lceil m/2\rceil})/3.
+\]
+On a block with coefficients $(a,b,b,b,b)$, rows, columns and calibrations lose zero and the total forbidden sign mass is $(\sqrt2a-b)^2$. Summing blocks and copies yields exactly
+\begin{equation}\label{eq:converse}
+ \eps=\frac1{243}\sum_m(\sqrt2\Lambda_m-\Lambda_{\lceil m/2\rceil})^2
+      =\frac2{243}H(h)^2.
+\end{equation}
+Both links are exact. For unsorted lists the first equality remains true with their ordered defect. Finite support of size $n$ compresses the effects to genuine POVMs in dimension $9n$, preserving probabilities.
+
+For $\eps_*(\sigma)$ optimized over type-I joint states and measurements with marginal $\sigma$, allowing Bob an unrestricted purification, we have
+\[
+ \frac{H(\sigma)^2}{C_R}\le\eps_*(\sigma),\qquad
+ \eps_*(I_9/9\otimes h)\le\frac{H(h)^2}{121.5}.
+\]
+This is a two-sided comparison on specified amplified marginals. Equation~\eqref{eq:exchange} concerns pure states or mathematical purifications. It is false for the actual entanglement of an arbitrary mixed state: $\sum_ip_i|ii\rangle\langle ii|$ has the same marginal as its pure Schmidt counterpart, but branchwise product structure makes its squared Bell-exchange vector error at least $2-\sqrt2$ when its environment is untouched. Marginal entropy is likewise not mixed-state distillable entanglement.
+
+\subsection{Finite templates, with their endpoints}
+Let $c_0,\ldots,c_L\ge0$, $\sum c_l^2=1$, on the truncated binary-word construction, and write $w_l=c_l^2$. There are $9\cdot2^l$ equal eigenvalues $w_l/(9\cdot2^l)$ at level $l$. A parent block contributes the sign form just calculated; its summed interior mass is $2\sum_{l<L}(c_{l+1}-c_l)^2$. The empty-word flag and top-level magic deterministic completions contribute $c_0^2$ and $8c_L^2$. Therefore
+\begin{equation}\label{eq:template}
+ \eps(c)=\frac{2\sum_{l=0}^{L-1}(c_{l+1}-c_l)^2+c_0^2+8c_L^2}{243}.
+\end{equation}
+This includes both boundary penalties. Its resource identities are
+\[
+ S_I=\ln9+\mathcal H(w)+(\ln2)\mathbb E[l],
+\]
+\[
+ D_{\mathrm{II}_1}=(\ln2)\mathbb E[L+1-l]-\mathcal H(w)
+                   +\ln(1-2^{-(L+1)}),
+\]
+where $\mathcal H(w)=-\sum_lw_l\ln w_l$ and the finite-factor construction is a unital $M_{9(2^{L+1}-1)}$ embedding. For a bilateral realization, partition a $\mathrm{II}_\infty$ identity into levels with traces $9\cdot2^l$, and each level into nine equal atoms. Trace comparison identifies a source atom at level $l+1$ with each pair of target atoms at level $l$. Four such maps give the five-block system for each copy. The density is scalar $w_l/(9\cdot2^l)$ on each level, so the maps have exactly the coefficients used in the block loss calculation. Countable orthogonal sums give normal POVMs. Bilateral ladders in $\mathrm{II}_\infty$ thus have energy $E=\sum_{l\in\Z}(c_{l+1}-c_l)^2$ and loss $2E/243$, including every jump to a zero coefficient.
+
+Let $a_1=2.338107410\ldots$ be the first positive Airy zero parameter and put
+\[
+ c_*=\frac{2a_1^{3/2}}{3\sqrt3},\qquad
+ \kappa=(\ln2)c_*\sqrt{2/243}=0.0865330722761432\ldots.
+\]
+The normalized Dirichlet ground state of $-d^2/dx^2+x$ has kinetic energy $a_1/3$ and first moment $2a_1/3$, by scaling variation. Sampling its dilates on a half-line gives energy $a_1/(3r^2)+O(r^{-3})$, mean distance $2a_1r/3+O(1)$, and $\mathcal H(w)=\ln r+O(1)$. A shifted or vanishing boundary sample and a cutoff at $r$ times a power of $\ln r$ control the endpoint and Airy-tail errors. Inverting \eqref{eq:template} gives sufficient costs
+\begin{align*}
+ S_I(\eps)&\le\kappa\eps^{-1/2}+\tfrac12\ln(1/\eps)+O(1),\\
+ D_{\mathrm{II}_1}(\eps)&\le\kappa\eps^{-1/2}-\tfrac12\ln(1/\eps)+O(1).
+\end{align*}
+These are abstract strategies, without a Hamiltonian interpretation.
+
+For bilateral Gaussian $w_l\propto e^{-l^2/(2\sigma^2)}$, the shift energy is $2[1-e^{-1/(8\sigma^2)}]$ up to exponentially small lattice errors. Thus $\eps\sim1/(486\sigma^2)$. Symmetry makes $\operatorname{Cov}(l,\ln w_l)=0$ and $\Var(\ln w_l)\to1/2$, giving
+\[
+ \Var_\phi(\ln h)=(\ln2)^2\sigma^2+\tfrac12+o(1),\qquad
+ \eps\Var_\phi(\ln h)\longrightarrow\frac{(\ln2)^2}{486}.
+\]
+For arbitrary profiles the covariance term must be retained; the difference between log-density and level variances need not be uniformly bounded.
+
+\subsection{Measure bounds and the sharper wall estimates}
+The density of $X$ is $f(s)=(\ln2)2^sp(2^s)$; with $g=\sqrt f$,
+\[
+ H^2=\int_\R(g(s+1)-g(s))^2\,ds.
+\]
+Fubini with $s=u+k$, $0\le u<1$, fibres the mass, energy and first moment into discrete ladders; the offset $u$ stays in the moment. A nonzero probability cannot have $H=0$.
+
+For any unit-interval masses $m_j$, Cauchy--Schwarz gives $\sum_j|m_j-m_{j-1}|\le2H$. A summable nonnegative sequence has variation at least $2\max m_j$, so every unit interval has mass at most $H$. In type I, $p=\lambda_{\max}$ on $(0,1)$, whence $\lambda_{\max}\le2H$. Covering $[0,x]$ by at most $x+1$ unit intervals and integrating the surviving tail gives the valid all-$H$ bound
+\begin{equation}\label{eq:elementary}
+ S(h)\ge\frac{(\ln2)(1-3H)_+^2}{2H}-1.
+\end{equation}
+Here $\mathbb E[X_-]=\lambda_{\max}/\ln2$ and $tp(t)\le1$ were used. The positive part is essential.
+
+For normalized finite trace, decreasing $p$ on $(0,1)$ dominates the uniform cumulative distribution, so $m=\mathbb E[-\ln T]\ge1$. Relative entropy against $t^{-\theta}$ gives $D\ge\theta m+\ln(1-\theta)$, $\theta<1$, and optimization yields
+\begin{equation}\label{eq:deficit}
+ D\ge m-1-\ln m.
+\end{equation}
+A lower estimate inserted for $m$ must be replaced by its maximum with 1. Infinite moments follow by the variational form before optimization.
+
+To get sharp leading wall constants, let $b_n$, $n\ge0$, have mass $M$, energy $D=\sum(b_{n+1}-b_n)^2$ including $b_{-1}=0$, and moment $A=\sum nb_n^2$. Piecewise-linear interpolation has squared norm $M-D/6$, derivative energy $D$, and shifted first moment at most $A+3M/2$. The continuum Airy variational inequality therefore gives, for $\theta>0$,
+\[
+ \theta D+A\ge
+ M\frac{a_1\theta^{1/3}-3/2}{1+a_1\theta^{-2/3}/6}.
+\]
+Truncation includes infinite moment cases. This is a variational proof of the discrete estimate, not a fit to numerical eigenvalues.
+
+In type I integration over $(0,1/2)$ in the definition of $H$ gives $\lambda_{\max}\le aH^2$, $a=2/(\sqrt2-1)^2$. Cut $g$ below $-K$, $K=\lceil2\log_2(1/H)\rceil$. The removed mass is $\delta\le aH^4$, remaining mass $M=1-\delta$, and new energy $E\le H^2+\sqrt2\delta$. The removed moment is exactly $-\delta(K+1/\ln2)$. Fibre the Airy inequality and optimize $\theta=(a_1M/(3E))^{3/2}$ to obtain
+\[
+ \mathbb E[X]\ge\frac{c_*M^{3/2}}{\sqrt E}-\frac{3M}{2}
+ -\frac{3c_*}{4}\sqrt{ME}-K-\frac\delta{\ln2}.
+\]
+For $0<H\le0.05$, elementary bounds on these explicit remainders yield
+\begin{equation}\label{eq:wall}
+ \mathbb E[X]\ge\frac{c_*}H-2\log_2(1/H)-3.5,\qquad
+ S(h)\ge(\ln2)\mathbb E[X].
+\end{equation}
+Indeed the additional remainder is at most
+$c_*(\sqrt2a/2+3/4)H+c_*(3a/2+3\sqrt2a/8)H^3+aH^4/\ln2<1$.
+
+For rank $q$, each cutoff fibre has at most $\log_2q+K+1$ sites. The Dirichlet box eigenvalue $2[1-\cos(\pi/(n+1))]$ yields
+\[
+ \ln q\ge\frac{(\ln2)\pi}H-O(\ln(1/H)).
+\]
+For normalized $\mathrm{II}_1$ trace the upper wall at $T=1$ is exact. Reversing ladders gives
+\[
+ \mathbb E[-X]\ge\frac{c_*}H-\frac32-\frac{3c_*}{4}H.
+\]
+Combine it with \eqref{eq:deficit}, using $m\ge1$, to get $D\ge(\ln2)c_*/H-\ln(1/H)-O(1)$.
+
+For variance, the translated laws $f(s)$ and $f(s+1)$ have means separated by one. Centering at their midpoint gives
+\[
+ 1\le H\sqrt{4\Var(X)+1},\qquad
+ \Var(X)\ge\frac{1-H^2}{4H^2}.
+\]
+Infinite variance satisfies the extended-real statement.
+
+Finally put $K_{\rm mod}=-\ln p(T)$ and $W=K_{\rm mod}-\ln T\ge0$. With $V=\Var(X)<\infty$, a length-$2L$ interval and Chebyshev give
+\[
+ \Pr(W>w)\le V/L^2+2L(\ln2)e^{-w}
+ \le3(\ln2)^{2/3}V^{1/3}e^{-2w/3}.
+\]
+For $w_0=\tfrac12\ln V+\tfrac32\ln3+\ln(\ln2)$ in the small-$H$ range, tail integration gives $\mathbb E[W^2]\le w_0^2+3w_0+9/2$. The triangle inequality for standard deviations gives the safe bound
+\[
+ \Var(K_{\rm mod})\ge
+ \left[(\ln2)\sqrt V-\sqrt{w_0^2+3w_0+9/2}\right]_+^2.
+\]
+For $H\le0.05$ the bracket is positive and increasing for $V\ge(1-H^2)/(4H^2)$, so
+\[
+ \Var(K_{\rm mod})\ge\frac{(\ln2)^2}{4H^2}
+                    [1-O(H\ln(1/H))].
+\]
+To cover $V=\infty$, let $Y=\ln T$. Monotonicity gives $Y\le K_{\rm mod}$ and, for any real $b$ and $t>0$,
+\[
+ \Pr(Y<b-t)\le\Pr(K_{\rm mod}<b-t/2)+e^{-t/2}.
+\]
+Integrating the two tails yields $\mathbb E[(Y-b)^2]\le4\mathbb E[(K_{\rm mod}-b)^2]+8$. Finite modular variance would imply finite $V$, proving the remaining case.
+
+\subsection{Sorted trace position and matching exponents}
+An unsorted bilateral ladder density is $r(t)=w_l/(9\cdot2^l)$ on $[9\cdot2^l,9\cdot2^{l+1})$. Its ordered defect is exactly $E$. The actual singular function is $r^*$. Rearrangement increases affinity, since intersections of superlevel sets are maximized by initial intervals, and $(2r(2t))^*=2r^*(2t)$. Thus
+\[
+ H_{\rm sorted}^2\le E=121.5\eps,
+\]
+with equality only under an appropriate monotone level ordering. Applying the variance inequality gives the sharp template result
+\[
+ \lim_{\eps\downarrow0}\eps\inf_{\substack{\text{bilateral templates}\\\ell\le\eps}}\Var(\ln T)
+       =\frac{(\ln2)^2}{486}.
+\]
+For the upper direction use a broad Gaussian and, below $l=-\sigma^2\ln2/2$, continue its tail geometrically with adjacent ratio $e^{(\ln2)/2}$. Then $w_l/2^l$ is decreasing; normalization, energy and moments change only exponentially little. Conditional on a level, $T=9\cdot2^lU$ with $U$ uniform on $[1,2]$, giving $\Var(\log_2T)=\sigma^2+O(1)$. This proof concerns sorted trace position. The Gaussian log-density upper bound is a separate statement.
+
+Combining the robust law and measure bounds with the Airy, sine and Gaussian constructions gives the following leading terms. Negative logarithmic remainders accompany the first three lower bounds; the last lower term has relative $O(\sqrt\eps\ln(1/\eps))$ remainder, with fixed-$C_R$ constants.
+\[
+\begin{array}{l|cc}
+\text{resource}&\text{lower leading term}&\text{attainable upper leading term}\\\hline
+ S_I&(\ln2)c_*/\sqrt{C_R\eps}&(\ln2)c_*/\sqrt{121.5\eps}\\
+ \ln d&(\ln2)\pi/\sqrt{C_R\eps}&(\ln2)\pi/\sqrt{121.5\eps}\\
+ D_{\mathrm{II}_1}&(\ln2)c_*/\sqrt{C_R\eps}&(\ln2)c_*/\sqrt{121.5\eps}\\
+ \Var(\log_2T)&1/(4C_R\eps)&1/(486\eps)\\
+ \Var_\phi(-\ln h)&(\ln2)^2/(4C_R\eps)&(\ln2)^2/(486\eps)
+\end{array}
+\]
+The trace-position lower inequality is exactly $1/(4C_R\eps)-1/4$. A sine profile with zero endpoints on a length-$L$ ladder has energy $2[1-\cos(\pi/L)]$ and dimension logarithm $L\ln2+O(1)$. Together with the rank lower bound this gives
+\[
+ \frac{((\ln2)\pi)^2}{C_R(\ln d)^2}(1-o(1))
+ \le1-\omega_d(\GIII)
+ \le\frac{((\ln2)\pi)^2}{121.5(\ln d)^2}(1+o(1)).
+\]
+This proves Theorem~\ref{thm:price}, for POVMs and mixed strategies as well. The sine mechanism is prior methodology \cite{LTW,Precision}, and exponential game witnesses precede this result \cite{Coladangelo,Explicit}. The authors' explicit-game companion already asserts a different game's law $\exp(\eps^{-1+o(1)})$; its $\Theta(\eps^{-1/2})$ law for another game concerns \emph{dimension}, not its logarithm. The present result determines this game's $\exp(\Theta(\eps^{-1/2}))$ law. It does not improve a universal previous-best exponent of $1/8$.
+
+These are asymptotic bounds with a universal finite $C_R$. The sufficient small-$H$ range is $\eps\le0.05^2/C_R$. No validated numerical constant is given; the sharp constant is conjectural. The proposed sharp robustness coefficient $C_R=121.5$ remains conjectural; the exact converse proves its necessity as a lower candidate, not its universal validity.
+
+\subsection{Deficit divergence without a quantitative estimate}
+There is also a direct compactness proof for normalized finite algebras. Suppose losses tend to zero with $D_{\tau_n}(h_n)\le C$. Support reduction and trace normalization change the deficit to $D+\ln\tau_n(p)\le D$. Standardize both sides. Since $x\ln x\ge-1/e$,
+\[
+ \tau_n(h_n1_{(K,\infty)}(h_n))\le\frac{C+1/e}{\ln K}=:t_K\longrightarrow0.
+\]
+The truncated vectors $\zeta_{n,K}=\sqrt{\min(h_n,K)}$ have bounded operator norm and squared $L^2$ error at most $t_K$. Their classes in the tracial ultraproduct converge in $L^2$ to a unit vector. All coordinate effects give bounded POVMs there. A correlation changes by at most $2\sqrt{t_K}$ upon truncation, so the finite list of limiting correlations is perfect. The ultraproduct is finite and its vector state normal, contradicting semifinite exclusion. Consequently bounded deficit forces a positive loss gap, uniformly over these normalized finite-algebra strategies. It does not bound the deficit of every state in a fixed finite factor.

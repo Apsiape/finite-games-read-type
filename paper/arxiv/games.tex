@@ -1,0 +1,124 @@
+\section{The predicates and the modular bridge}\label{sec:games}
+\subsection{Flagged magic square and its nine-copy gluing}
+Let $\mathcal R=\{+++,+--,-+-,--+\}$ and let $\mathcal C_j$ be the triples of product $\eta_j$, where $\eta=(+,+,-)$. Put $r_0=c_0=+++$ and $r_1=c_1=+--$. Alice's questions are $R_1,R_2,R_3,T_0,T_1$; Bob's are $C_1,C_2,C_3,U_0,U_1$. A row answer is in $\mathcal R\cup\{f\}$, and a column answer in $\mathcal C_j\cup\{f\}$. On $T_x$ the answers are $\mathcal C_1\setminus\{c_x\}$ and two signs; on $U_y$ they are $\mathcal R\setminus\{r_y\}$ and two signs.
+
+At $(R_i,C_j)$ accept two flags, reject a single flag, and otherwise require equal intersecting signs. At $(T_x,C_1)$ a sign matches the class $\{f,c_x\}$; a triple must match Bob's triple. At $(R_1,U_y)$ use the reversed rule with $r_y$. At $(T_x,U_y)$ two signs must satisfy $ab=(-1)^{xy}$; if either answer is a triple accept. All other cells accept all valid answers. Sample the 25 pairs uniformly. This is $\FMS$, in a real Pauli convention unitarily equivalent to \cite{FMS}.
+
+For $\GIII$ take nine disjoint copies indexed by $j\in\Z/9\Z$ and one extra Bob question $\mathrm{Lab}$, with answers $a\in\Z/9\Z$. Besides the 225 internal pairs, use
+\[
+ (R_1^j,\mathrm{Lab}):\quad (\text{Alice answers }f)\iff(a=j),
+\]
+\[
+ (R_2^j,\mathrm{Lab}):\quad (\text{Alice answers }+++)\iff(a\in\{j+1,j+2\}).
+\]
+These are the 243 equally weighted pairs. Other cross-copy pairs have weight zero. All indices below are modulo nine. The finite predicate is also enumerated in the ancillary data.
+
+The real square used to define the ideal projectors is
+\[
+ O=\begin{pmatrix}X\otimes I&I\otimes X&X\otimes X\\
+ I\otimes Z&Z\otimes I&Z\otimes Z\\
+ X\otimes Z&Z\otimes X&Y\otimes Y\end{pmatrix}.
+\]
+Joint row and column eigenspaces give the four magic outcomes; append a one-dimensional flag. The calibrated rays are
+\[
+ c_0=(1,0,1,0)/\sq,\quad c_1=(0,1,0,1)/\sq,
+\]
+\[
+ r_0=(1,1,1,1)/2,\quad r_1=(1,-1,1,-1)/2.
+\]
+Their overlap is $\langle c_x,r_y\rangle=(-1)^{xy}/\sq$. The sign projectors are the rays $(f\pm c_x)/\sq$ and $(f\pm r_y)/\sq$; all remaining outcomes are the calibrated residual magic rays. They win on
+\[
+ \Psi_2=(|ff\rangle+\sq\sum_{i=0}^3|ii\rangle)/3.
+\]
+
+\subsection{The conference-basis game}
+For $\Gthree$, both players have base questions $R_1,R_2,R_3,C_1,C_2,C_3,H$. Each has four magic rays and a flag. The six old bases are the joint eigenspaces above. The additional orthonormal basis consists of the columns
+\[
+ r_0=\frac{(1,1,-1,0)^T}{\sqrt3},\quad
+ r_1=\frac{(1,-1,0,1)^T}{\sqrt3},\quad
+ r_2=\frac{(0,1,1,1)^T}{\sqrt3},\quad
+ r_3=\frac{(1,0,1,-1)^T}{\sqrt3}.
+\]
+Their numerator Gram matrix is $3I$. Up to signed row and column permutations, these numerators form the classical skew conference matrix of order four, the $q=3$ case of the Paley construction; see Goethals--Seidel \cite[Section 2, Theorem 2.1]{Conference}. In the coordinate basis the $R_2$ labels are $d_0=+++$, $d_1=-+-$, $d_2=+--$, $d_3=--+$. Alice adds $T_0,T_1$, with signs and residual labels $k_j$ for $j\ne x$. Bob adds $U_0,U_1$, with signs and labels $h_j$ for $j\ne y$. Sample all 81 pairs uniformly and use the following rules.
+\begin{enumerate}
+\item On base/base cells accept two flags and reject one flag. Two magic outcomes are accepted exactly when $\Tr(P_{q,a}P_{r,b})>0$ for the specified rational ray projectors.
+\item On $(T_x,R_2)$ a sign matches $\{f,d_x\}$ and $k_j$ matches $d_j$.
+\item On $(H,U_y)$ a Bob sign matches $\{f,y\}$ and $h_j$ matches $j$.
+\item On $(T_x,U_y)$ two signs obey $ab=(-1)^{xy}$; residual answers are accepted.
+\item All remaining cells accept every valid pair.
+\end{enumerate}
+Thus the predicate uses rational zero tests only. There are five answers at every question and 732 forbidden events. Use $c_0=e_0,c_1=e_1$ and the displayed $r_0,r_1$ for the sign rays. The ideal state is
+\[
+ \Psi_3=(|ff\rangle+\sqrt3\sum_{i=0}^3|ii\rangle)/\sqrt{13}.
+\]
+Base orthogonality and calibration give zero forbidden amplitudes. For signs the amplitude is $(1+ab(-1)^{xy})/(2\sqrt{13})$, so the rejected parity amplitudes vanish.
+
+\subsection{Extraction in arbitrary normal strategies}
+\begin{lemma}[Checked classes]\label{lem:classes}
+A perfectly matched coarse partition is a centralizer PVM, with its unique standard commutant mirror. Fine effects with sharp marginals are the corresponding joint spectral projections.
+\end{lemma}
+\begin{proof}
+Use Lemma~\ref{lem:support}. For different classes $c,d$, the commuting positive product $E_cF_d$ has expectation zero and annihilates $\xi=\xi_\phi$. Summing gives $E_c\xi=E_cF_c\xi=F_c\xi$. Hence $E_cE_d\xi=E_cF_d\xi=0$. Separation and completeness give orthogonality and idempotence. A self-adjoint mirror gives $\phi(E_cx)=\phi(xE_c)$, so $E_c\in M_\phi$ and $F_c=JE_cJ$. A positive fine effect lies under each of its projection marginals; completeness saturates their products.
+\end{proof}
+Apply this to flag/magic classes and cell signs. On the magic projection $m=1-f$ the square relations hold internally. Write $a=O_{11},b=O_{12},c=O_{21},d=O_{22}$. They give
+\[
+ [a,b]=[a,c]=[b,d]=[c,d]=0,\qquad cb=-bc,\qquad ad=-da.
+\]
+Indeed the two expressions for $O_{33}$ are $acbd=-abcd$; multiplication by $a$ and $d$ gives the first anticommutation, and $[ac,bd]=0$ gives the second. Two commuting Pauli pairs therefore generate a unital centralizer $M_4$, with arbitrary multiplicity. No trace or finite-dimensional rigidity assumption has been used.
+
+For $\Gthree$ the diagonal base cells check every outcome. An actual conference outcome $E_j$ is orthogonal to every old ray orthogonal to $r_j$: the forbidden event is $\phi(PE_jP)=0$ and faithfulness gives $E_jP=0$. The following old rays span the four required orthogonal complements:
+\[
+\begin{array}{c|ccc}
+j&\multicolumn{3}{c}{\text{spanning rays}}\\\hline
+0&e_3&e_0-e_1&e_0+e_2\\
+1&e_2&e_0+e_1&e_0-e_3\\
+2&e_0&e_1-e_2&e_1-e_3\\
+3&e_1&e_0-e_2&e_0+e_3
+\end{array}
+\]
+Consequently $E_j\le r_jr_j^T\otimes1$. Both four-tuples sum to $m$, so each positive difference is zero. This fixes the conference basis completely, including multiplicities.
+
+\begin{lemma}[Modular bridge]\label{lem:bridge}
+Every normal perfect strategy for $\FMS$, respectively $\Gthree$, on faithful support contains four partial isometries $\beta_i$ from $f$ onto the four magic corners, with modular eigenvalue $r=2$, respectively $r=3$. In particular
+\[
+ \phi(m)=4r\phi(f),\qquad \phi(f)=\frac1{1+4r}.
+\]
+\end{lemma}
+\begin{proof}
+Choose a minimal $q$ of the centralizer $M_4$ and centralizer maps $u_x,v_y$ from $q$ to the calibrated rays. Their products are $u_x^*v_y=(-1)^{xy}q/\sqrt r$. On the standard corner Hilbert space $eJeJ L^2(M)$, where $e=f+q$, pull back the sign differences through $f+u_x$ and $J(f+v_y)J$. They are commuting self-adjoint contractions $X_x,Y_y$. The joint-support vector is
+\[
+ \theta_{xy}=(f+u_x^*)J(f+v_y^*)J\xi
+             =(f+(-1)^{xy}q/\sqrt r)\xi.
+\]
+The rejected sign products give
+\[
+ X_x\theta_{xy}=(-1)^{xy}Y_y\theta_{xy},\qquad
+ X_xY_y\theta_{xy}=(-1)^{xy}\theta_{xy}.
+\]
+Each coefficient $f\pm q/\sqrt r$ is invertible in the centralizer of the corner. Its vector separates both corner algebras; cancellation first makes all four contractions reflections. Put $H=f+q/\sqrt r$ and $Z=f-q$. The three positive cells identify one $X$ and one $Y$ with $XH\xi=YH\xi$. In the negative cell, $XZH\xi=-YZH\xi=-ZXH\xi$, since $Y$ commutes with $Z$. Separation gives $XZ+ZX=0$.
+
+It follows that $X=\beta+\beta^*$, with $\beta=qXf$, $\beta^*\beta=f$ and $\beta\beta^*=q$. The self-adjoint mirror makes $X$ centralize $\omega(x)=\phi(kx)$, $k=f+q/r$. The bounded invertible centralizer perturbation formula of Pedersen--Takesaki \cite[Lemma 4.5]{PT} is
+\[
+ \sigma_t^\omega(x)=k^{it}\sigma_t^\phi(x)k^{-it}.
+\]
+Its $q$--$f$ block gives $\sigma_t^\phi(\beta)=r^{it}\beta$. Multiplication by the magic matrix units gives all four maps. KMS gives $\phi(q)=r\phi(f)$. If one sector vanished, the off-diagonal reflection would kill the other, contradicting $f+m=1$. This proves nonvanishing and the mass formula.
+\end{proof}
+This is the arbitrary-normal extension of the flagged-overlap mechanism in \cite[Appendix C]{FMS}. It is not obtained by substituting type-II multiplicities into a finite-dimensional self-test.
+
+\subsection{Semifinite exclusion}
+For a perfect $\GIII$ strategy, the first links make the flags $F_j$ a partition of the identity, with Bob mirrors $JF_jJ$. The second links identify the designated magic corner with $C_j=F_{j+1}+F_{j+2}$. Lemma~\ref{lem:bridge} supplies
+\begin{equation}\label{eq:ck}
+ w_j^*w_j=F_j,\quad w_jw_j^*=C_j,\quad
+ \sigma_t^\phi(w_j)=2^{it}w_j,\quad
+ \sum_jF_j=1,\quad\sum_jC_j=2.
+\end{equation}
+The mass equations $2\phi(F_j)=\phi(F_{j+1})+\phi(F_{j+2})$ imply $\phi(F_j)=1/9$ by a maximum principle around the cycle. Every copy has full support, since its flag and magic masses total $9\phi(F_j)=1$.
+
+Suppose $M$ is semifinite and $\phi=\Tr(h\,\cdot)$ on faithful support. Then $hw_j=2w_jh$ as affiliated operators. With $v_j=w_j^*$, bounded functional calculus gives $g(h)v_j=v_jg(h/2)$. For a bounded nonnegative $g$ compactly supported in $(0,\infty)$, trace integration and the two covers in \eqref{eq:ck} yield
+\[
+ \phi(g(h))=\sum_j\Tr(hg(h)v_jv_j^*)
+ =\frac12\sum_j\Tr(C_jhg(h/2))=\phi(g(h/2)).
+\]
+For rigor use $\Tr(T^{1/2}vv^*T^{1/2})=\Tr(v^*Tv)$ for positive integrable $T$, rather than cycling arbitrary unbounded products. The probability law of $h$ under $\phi$ would have equal mass on all dyadic windows $(2^k,2^{k+1}]$. Every such mass is zero, a contradiction.
+
+For a semifinite Bob ambient algebra, standardize Bob first. His standard commutant is semifinite and contains the compressed Alice effects, so the same proof applies. Conditioning on a positive-mass semifinite central summand preserves zero losing events; hence all state weight of either ambient algebra lies on its type-III central part. An unused semifinite summand need not be absent. More generally, if Alice's algebra is contained in a semifinite separator $N\subseteq B'$ and the state is normal on $N$, perfect play is impossible.

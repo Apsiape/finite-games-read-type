@@ -1,0 +1,186 @@
+\section{Which ratios finite games can force}\label{sec:ratios}
+\begin{definition}[Forced ratio]\label{def:forced}
+A finite binary-scoring game \emph{forces} $r>0$ if it has at least one perfect normal strategy and every perfect normal strategy, after the support reduction of Lemma~\ref{lem:support}, has a nonzero bounded $r$-eigenoperator for its faithful marginal state. The ambient algebra need not be a factor. The identity and adjoints supply ratio $1$ and reciprocals. A distinguished bridge parameter is not the entire forced set: the ideal finite-dimensional $\FMS$ strategy has modular point spectrum $\{1,2,1/2\}$.
+\end{definition}
+
+\subsection{The general overlap bridge}
+A rigid real core of dimension $d$ means checked base measurements consisting of a common flag $f$ and rank-one ray projections in a centralizer copy of $M_d$ with unit $m=1-f$, with arbitrary multiplicity. On every base/base pair accept two flags, reject exactly one flag, and accept two ray labels precisely when their ordinary dot product is nonzero. The six magic-square contexts give such a core for $d=4$, by Section~\ref{sec:games}.
+
+Choose four forced unit rays, with phases such that
+\[
+ \langle w_x,v_y\rangle=c(-1)^{xy},\qquad x,y\in\{0,1\},\quad c>0.
+\]
+The rays within either pair may be nonorthogonal and may occur in different base questions. Add $T_x$ for Alice and $U_y$ for Bob. Each bridge question replaces the flag and its selected ray in a calibrating basis by two sign answers, retaining the other $d-1$ ray labels. Calibrate $T_x$ against Bob's basis of $w_x$: a sign matches exactly the flag or selected ray, and a residual answer matches its own label. Use the reversed rule for $U_y$ and Alice's basis of $v_y$. At $(T_x,U_y)$ two signs must satisfy $ab=(-1)^{xy}$; otherwise accept. All other cells are free. Give every question pair positive weight.
+
+\begin{lemma}[Arbitrary-normal flagged overlap]\label{lem:overlap}
+This bridge forces $r=c^{-2}\ge2$. On faithful support it extracts a partial isometry $\beta\in qMf$, where $q$ is a minimal diagonal of the rigid core, satisfying
+\[
+ \beta^*\beta=f,\qquad \beta\beta^*=q,\qquad
+ \sigma_t^\phi(\beta)=r^{it}\beta,\qquad
+ \phi(f)=\frac1{1+dr}.
+\]
+Both supports are nonzero; ``full'' refers to these initial and final supports.
+\end{lemma}
+\begin{proof}
+Choose centralizer maps $u_x=|w_x\rangle\langle e|$ and $v_y=|v_y\rangle\langle e|$, so $u_x^*v_y=c(-1)^{xy}q$. Put $e_0=f+q$ and work on $e_0Je_0J L^2(M)$ with separating vector $e_0\xi$. Calibration fixes the sign supports. Pulling their self-adjoint contraction differences back by $f+u_x$ and $J(f+v_y)J$ gives commuting $X_x,Y_y$ and
+\[
+ \theta_{xy}=(f+u_x^*)J(f+v_y^*)J\xi
+       =(f+c(-1)^{xy}q)\xi.
+\]
+Forbidden signs imply $X_x\theta_{xy}=(-1)^{xy}Y_y\theta_{xy}$ and $X_xY_y\theta_{xy}=(-1)^{xy}\theta_{xy}$. Positivity of contraction defects makes their squares fix $\theta_{xy}$. Each $f\pm cq$ is invertible in the corner centralizer. Its vector separates the left algebra by cancellation and the right algebra by commuting this coefficient through the commutant. Thus all four contractions are reflections.
+
+Put $H=f+cq$ and $Z=f-q$. The three positive cells identify reflections $X,Y$ with $XH\xi=YH\xi$; the negative cell gives $(XZ+ZX)H\xi=0$. Separation yields $XZ+ZX=0$. Consequently $X=\beta+\beta^*$ with $\beta=qXf$ and the asserted supports. The mirror relation makes $X$ centralize the faithful corner functional $\omega(x)=\phi(kx)$, $k=f+c^2q$. The bounded centralizer perturbation formula \cite[Lemma 4.5]{PT} gives
+\[
+ \sigma_t^\omega(x)=k^{it}\sigma_t^\phi(x)k^{-it},\qquad
+ \sigma_t^\phi(\beta)=k^{-it}\beta k^{it}=c^{-2it}\beta.
+\]
+KMS gives $\phi(q)=c^{-2}\phi(f)$. The $d$ core diagonals are centralizer equivalent, proving the mass formula. If one support vanished the off-diagonal reflection would kill the other and then $m+f=1$ would vanish. Finally Cauchy--Schwarz gives $4c^2\le\|w_0+w_1\|^2$ and $4c^2\le\|w_0-w_1\|^2$; adding proves $c^2\le1/2$.
+
+Completeness uses
+\[
+ \psi_c=\frac{c|ff\rangle+\sum_{i=1}^d|ii\rangle}{\sqrt{c^2+d}},
+ \quad t_x^a=\frac{f+aw_x}{\sqrt2},\quad
+ u_y^b=\frac{f+bv_y}{\sqrt2}.
+\]
+The two-sign amplitude is $c(1+ab(-1)^{xy})/(2\sqrt{c^2+d})$; all other forbidden amplitudes are calibration or base orthogonalities. No within-pair orthogonality was used.
+\end{proof}
+The overlap mechanism, its nonorthogonal permission and ideal state are due to Man\v cinska \cite[Appendix C]{FMS}. Her Theorem~17 gives the finite-dimensional state self-test for a suitable base game; the lemma supplies the arbitrary-normal extension.
+
+\begin{proposition}[Pauli confinement]\label{prop:pauli}
+For stabilizer projections $P_A,P_B$, every nonzero eigenvalue of $P_AP_BP_A$ is $2^{-k}$ for an integer $k\ge0$. The flagged constructions generated homogeneously by such bridge tilts force only ratios in $2^\Z$.
+\end{proposition}
+\begin{proof}
+For stabilizer groups $S_A,S_B$, put $H=S_B\cap C(S_A)$. Terms anticommuting with some element of $S_A$ vanish under compression. Hence
+\[
+ P_AP_BP_A=\frac{|H|}{|S_B|}P_AP_H,
+ \qquad P_H=\frac1{|H|}\sum_{g\in H}g.
+\]
+$P_H$ is a projection commuting with $P_A$, so their product is a projection, possibly zero. Both group orders are powers of two. No single-character action on a higher-rank code is assumed. The last assertion follows from Proposition~\ref{prop:degree} below. Non-stabilizer rays on the same qubit core escape this restriction.
+\end{proof}
+
+\subsection{All rational rays on the binary magic-square core}
+A rational ray has a nonzero rational representative; its unit representative need not be rational. The six seed contexts contain 24 rays: four coordinate rays, twelve pair sums and differences, and eight sign rays. Use the following basis rule: add a rational orthogonal basis if, for each new ray $b$, previously forced rays perpendicular to $b$ span $b^\perp$.
+
+The rule is sound in arbitrary normal strategies. Checked matching makes the new answers centralizer projections with the same flag. For any old perpendicular ray $u$, the forbidden positive expectation and faithfulness imply $E_bP_u=0$. Spanning gives $E_b\le P_b\otimes1$. Completeness makes the four positive differences sum to zero, so equality holds for each answer. This proof also works directly with initially unsharp effects after the checked partition reduction.
+
+\begin{theorem}[Rational-ray closure]\label{thm:closure}
+The least closure of the 24 seed rays under the basis rule is every rational ray of $\R^4$. Every rational orthogonal basis can therefore be forced by a finite chain of added questions.
+\end{theorem}
+\begin{proof}
+Identify $\R^4$ with the quaternions. Signed coordinate permutations and left multiplication by $(1+i)/\sqrt2$, $(1+j)/\sqrt2$, $(1+k)/\sqrt2$ permute the seed rays and preserve rational rays. Applying a symmetry to every question of an existing finite chain proves invariance of the closure; this is an actual image chain.
+
+Induct on the squared norm $n$ of a primitive integral representative $w$. For even $n$, primitiveness gives two or four odd coordinates. Some $a\in\{i,j,k\}$ pairs equal-parity positions, so $u=(1-a)w/2$ is integral with norm squared $n/2$, and $w=(1+a)u$. Induction and seed symmetry apply; primitive reduction only lowers the norm.
+
+For a vector with at least three nonzero coordinates, fix $w_i\ne0$. The three vectors $w_je_i-w_ie_j$, $j\ne i$, are independent in $w^\perp$ and have squared norms strictly below $n$. Apply induction also to the signed permutations $wi,wj,wk$. The quaternion orthogonal basis $\{w,wi,wj,wk\}$ now meets the basis rule.
+
+For a planar vector $(p,q,0,0)$ with $pq\ne0$, the even case is done. If $n$ is odd, the vectors $(q,-p,1,0)$ and $(p,q,1,0)$ have even norm squared $n+1$ and descend to $(n+1)/2<n$. Together with $e_2,e_3$ they span the respective complements of $(p,q,0,0)$ and $(q,-p,0,0)$. Thus their planar orthogonal basis is forced. One-coordinate rays and norms one and two are seeds. Finally combine finitely many ray chains to force any particular rational orthogonal basis. This proves finite existence without a game-size bound.
+\end{proof}
+
+\subsection{Single bridges, full-support products and positive rationals}
+\begin{theorem}[Orthogonal-pair bridge parameters]\label{thm:orthogonal}
+The distinguished parameters of rational rank-one bridges in $\R^4$ with both within-pair orthogonalities are exactly
+\[
+ \mathcal R_4=\{2+x^2+y^2:x,y\in\Q\}.
+\]
+Every member is forced on the binary magic-square core.
+\end{theorem}
+\begin{proof}
+Equal nonzero normalized overlaps imply that the squared norms of rational representatives $w_0,w_1$ have rational-square ratio. Rescale them to common squared norm $a$ and orient them to have equal dot products against $v_0$. A rational quaternion frame $\{w_0,w_0i,w_0j,w_0k\}$ has Gram matrix $aI$. If $w_0i\ne w_1$, the rational Householder reflection with normal $w_0i-w_1$ fixes $w_0$ and sends $w_0i$ to $w_1$; otherwise use the identity. In that frame write $v_0=(t,t,z,h)$ with rational coefficients and $t\ne0$. Then $c^2=t^2/(2t^2+z^2+h^2)$, proving necessity even with only the $w$-pair orthogonal.
+
+Conversely, for rational $\alpha,\gamma$, choose $w_0=e_0,w_1=e_1$ and representatives
+\[
+ v_0=(1,1,\alpha,\gamma),\qquad v_1=(1,-1,-\gamma,\alpha).
+\]
+Both pairs are orthogonal and their normalized cross overlaps are $(-1)^{xy}(2+\alpha^2+\gamma^2)^{-1/2}$ for bridge indices $x,y\in\{0,1\}$. Apply Theorem~\ref{thm:closure} and Lemma~\ref{lem:overlap}.
+\end{proof}
+The classical two-square criterion says that a nonzero positive rational is a sum of two rational squares exactly when its valuation at each prime congruent to $3$ modulo $4$ is even, including denominator valuations. Necessity follows by clearing denominators; such a prime dividing a sum of two integer squares divides both entries. Sufficiency uses the classical prime two-square theorem \cite{Zagier}, multiplicativity and inversion. Thus $5,8,9,13,16,17$ are excluded as orthogonal-pair single-bridge parameters, with no exclusion asserted for products or nonorthogonal pairs.
+
+The exact nonorthogonal computations in \texttt{anc/ratios/} supply witnesses for $15/4$, $91/16$, $20/3$, $15/2$, $27/2$, $14$, $30$, $90$, $63/4$ and $39/2$. These are finite computations only. For example take
+\[
+ w_0=(1,2,-3,0),\quad w_1=(1,2,0,3),\quad
+ v_0=(1,0,0,0),\quad v_1=(1,-2,-2,0).
+\]
+The squared norms are $14,14,1,9$ and cross dot products $(1,3;1,-3)$, so $r=14$. Since $14-2=12$ fails the two-square criterion, this lies outside $\mathcal R_4$. No exact description of all nonorthogonal parameters is established; a prospective Gram-form criterion must include singular forms and rank-three configurations.
+
+\begin{lemma}[Full-support product]\label{lem:product}
+The parallel product of two rigid full-support bridge games with parameters $r,r'$ forces $rr'$ and $r/r'$. Its ideal finite-dimensional strategy exists. Finite iteration has the same property.
+\end{lemma}
+\begin{proof}
+Fix the other component's questions and take component answer marginals. Every resulting strategy is perfect. Checked base classes have the same Bob mirrors for all other-component questions, so separation makes them independent of those questions. For bridge sign differences the common relation $XH\xi=YH\xi$ with invertible $H$ gives the same independence; calibration handles the residual outcomes. Do this for both components and both parties.
+
+All these marginal effects are projections. A joint POVM with sharp marginals has commuting marginals and joint effects their products: each effect lies below both marginals, and the positive residual defects sum to zero. Thus every extracted operator of one component commutes with those of the other, even for initial joint POVMs.
+
+The core matrix units and $\beta$ generate a unital $M_{d+1}$ with unit $f+m=1$. The other component similarly generates $M_{d'+1}$. In its tensor decomposition $f=1\otimes z$, $z\ne0$, so its product with any nonzero minimal diagonal of that matrix algebra is nonzero. In particular
+\[
+ (\beta\beta')^*(\beta\beta')=ff'\ne0,\qquad
+ (\beta\beta'^*)^*(\beta\beta'^*)=fq'\ne0.
+\]
+Their modular degrees are $rr'$ and $r/r'$. Tensor the ideal strategies for completeness. Finite products still extract a unital full matrix algebra with nonzero minimal product diagonals. This is not a product theorem for arbitrary eigenoperators in arbitrary games.
+\end{proof}
+
+\begin{theorem}[Every positive rational is forced]\label{thm:rationals}
+For each $r\in\Q_{>0}$ there is a finite binary-scoring game with a finite-dimensional perfect strategy which forces $r$ in every perfect normal strategy.
+\end{theorem}
+\begin{proof}
+Ratio two is supplied by $\FMS$. For an odd prime $p$, the residue sets of $a^2$ and $-2-b^2$ each have $(p+1)/2$ elements, so intersect. Choose $|a|,|b|\le(p-1)/2$. Then
+\[
+ 2+a^2+b^2=pk,\qquad 0<k<p,
+\]
+since $2+(p-1)^2/2<p^2$. The left side belongs to $\mathcal R_4$. By prime induction every prime divisor of $k$ has a full matrix bridge-product construction; Lemma~\ref{lem:product} divides these factors out and forces $p$. Finite products, powers, adjoints and the identity give every positive rational.
+\end{proof}
+The game can self-test a tensor product of bridge states. This is existence of a game forcing each rational, not a self-test of every prescribed rational Schmidt spectrum. More precisely, this section partly answers Man\v cinska's Open Question~2 \cite{FMS} by the family of bridge spectra from $\mathcal R_4$ and the checked nonorthogonal witnesses, together with tensor products. Prescribing all rational spectra remains a different problem. Her CK-31 example already has $c=2/5$ and squared ratio $25/4$; her counting obstruction already limits perfect-game self-test spectra to a countable set.
+
+\subsection{Six explicit games and exact certificates}
+The six games for $r=3,5/2,6,7,10,25/4$ are specified in \texttt{anc/ratios/} by integer ray bases, ordered forcing certificates, selected oriented bridge rays and the rules above. Each question has five answers and the distribution is uniform on every question pair. The ideal state is $(|ff\rangle+\sqrt r\sum_{i=0}^3|ii\rangle)/\sqrt{1+4r}$. The checker constructs every measurement and predicate entry and tests all forbidden amplitudes and every pair's normalization by exact multiquadratic arithmetic. It also checks each spanning triple against strictly earlier rays. These are explicit finite examples, with no minimal-size claim; the ratio-three example here uses a different added basis from the conference game $\Gthree$ of Section~\ref{sec:games}.
+
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+$r$ & $c^2$ & Questions/party & Pairs & Events & Forbidden\\
+\midrule
+$3$ & $1/3$ & 9 & 81 & 2025 & 732\\
+$5/2$ & $2/5$ & 13 & 169 & 4225 & 1638\\
+$6$ & $1/6$ & 9 & 81 & 2025 & 732\\
+$7$ & $1/7$ & 13 & 169 & 4225 & 1642\\
+$10$ & $1/10$ & 13 & 169 & 4225 & 1638\\
+$25/4$ & $4/25$ & 17 & 289 & 7225 & 2902\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For that example the added basis is
+\[
+ (0,1,-2,-1),\quad(0,1,1,-1),\quad
+ (1,-1,0,-1),\quad(2,1,0,1).
+\]
+Use $w_0=e_3,w_1=-e_1$ and $v_0=(0,-1,-1,1)/\sqrt3$, $v_1=(-1,1,0,1)/\sqrt3$. They have the required sign pattern, giving nine questions per player and 732 forbidden events. For ratio six use the norm-six pair of the same basis, with phases chosen for that pattern. The data files specify all other bases and calibrations without numerical thresholds.
+
+\subsection{Degree bounds and the scope of arithmetic restrictions}
+\begin{proposition}[Homogeneous-generation degree bound]\label{prop:degree}
+Suppose one actual perfect witness strategy has faithful state $\phi$, and $P=W^*(\text{Alice's effects})$ is generated by modular homogeneous elements with degrees in a subgroup $L\subset\R_{>0}$, including adjoints. Every ratio forced by the game lies in $L$, without taking its topological closure.
+\end{proposition}
+\begin{proof}
+$P$ is modular invariant and has the $\phi$-preserving conditional expectation \cite{Takesaki}. Equivalently restrict to $[P\xi]$ and compress Bob's effects; this preserves correlations and gives the faithful restricted state with the restricted modular group. Finite words in the homogeneous generators give a dense span of modular eigenvectors with degrees in $L$. A vector of any other degree is orthogonal to that entire span. A nonzero extracted eigenoperator applied to the separating vector cannot have that degree. Only this one witness is required.
+\end{proof}
+
+\begin{corollary}[Finite rigid cores and rational seeds]\label{cor:seeds}
+Consider a finite collection of finite-dimensional exactly rigid cores and full-support bridges, with added effects admitting the checked homogeneous decomposition below. Every forced ratio lies in the multiplicative group of the bridge parameters, and those parameters are algebraic. If the cores start from rational seeds and use rational orthogonal-complement closure, all forced ratios are rational. The union over this rational construction class is exactly $\Q_{>0}$.
+\end{corollary}
+\begin{proof}
+Checked class projections and core matrix units have degree one. A bridge sign difference splits into $u_x\beta$ and its adjoint, of degrees $r_i,r_i^{-1}$; these terms are themselves compressions of Alice's observables. Checked label and boundary projections and finite products preserve the stated decomposition when they are all the added effects. Proposition~\ref{prop:degree} applies whenever an actual perfect witness has these generators.
+
+In each fixed finite core dimension, the finite projection, orthogonality and completeness equations, with trace-one rank conditions, are a polynomial system over $\Q$. Real-closed-field transfer gives a real algebraic solution; exact rigidity fixes its squared overlaps to those of the original core. Thus $c_i^2$ is algebraic. This argument concerns the finite core, even if a later glued game has only infinite-dimensional perfect realizations. It does not apply finite-dimensional feasibility to that glued strategy. Rational linear systems preserve rational rays under orthogonal-complement operations, so rational seeds give rational $c_i^2$. The degree bound and Theorem~\ref{thm:rationals} give the last assertion.
+\end{proof}
+This includes the specified type-III-only checked gluing when its witness has precisely that homogeneous generation, as in \eqref{eq:ck}. It asserts nothing for arbitrary extra gluings or infinite-dimensional rigid cores.
+
+\begin{proposition}[Totally-real single-bridge rationality]\label{prop:totallyreal}
+For a single rigid bridge whose ray representatives lie in a totally real number field, the distinguished parameter forced by that bridge is rational. The special ideal modular spectrum $\{1,r,r^{-1}\}$ is essential.
+\end{proposition}
+\begin{proof}
+Real algebraic PVM strategies satisfy polynomial equations over $\Q$: symmetry, idempotence, completeness, state normalization and zero forbidden probabilities. Any real field embedding preserves them, hence gives another perfect strategy. When transporting density eigenvalues, enlarge the coefficient field to contain them and use a compatible extension of the embedding: the image density is positive semidefinite and real symmetric, so such real extensions exist. Images of square roots cannot be prescribed independently.
+
+For a single bridge over a totally real field $K$, squared norms and $c^2$ are totally positive. Under every embedding the four nonzero cross dot products have product equal to a negative square, so phases can restore the frustrated pattern. The overlap bound gives $\tau(c^2)\le1/2$. Adjoining the needed square roots of norms, $c^2$ and $c^2+d$ preserves total reality. Thus the ideal strategy transports under every embedding of $K$, and its modular spectrum becomes $\{1,\tau(r),\tau(r)^{-1}\}$ with $\tau(r)\ge2$. Universal forcing of the original $r\ge2$ requires $r=\tau(r)$ for every embedding. Therefore $r\in\Q$.
+\end{proof}
+Transport for a general strategy gives a constraint on an entire spectrum, not rationality of every forced ratio. An arbitrary real algebraic field need not be totally real, so this proposition is not an exclusion of irrational ratios for general finite games.
+
+Universally forced ratios give necessary spectral obstructions to worst-state value one by Lemma~\ref{lem:gap}; the rational construction theorem supplies no converse for an arbitrary forcing game. No theorem here reduces all finite-game type distinctions to universal ratio forcing.

@@ -1,0 +1,31 @@
+C1 overlaps [[0.7071067811865477, 0.7071067811865477], [0.7071067811865477, -0.7071067811865477]] completeness 2.220446049250313e-16 identity err 5.551115123125783e-16
+C2 uniform {'L': 5, 'loss': 0.006172839506172842, 'loss_formula': 0.006172839506172839, 'S': 5.721851997964138, 'S_formula': 5.721851997964138}
+C2 sine [{'L': 2, 'loss': 0.016460905349794237, 'loss_formula': 0.016460905349794237, 'S': 2.890371757896165}, {'L': 3, 'loss': 0.008230452674897118, 'loss_formula': 0.008230452674897118, 'S': 3.9300925287360826}, {'L': 5, 'loss': 0.003143753179013211, 'loss_formula': 0.0031437531790132105, 'S': 5.212754195031076}, {'L': 50, 'loss': 3.248183657166153e-05, 'loss_formula': 3.2481836571661584e-05, 'S': 23.131055037773578}]
+C3 constants {'a1': 2.338107410459767, 'kappaA': 1.3760835433437748, 'airy_entropy_const': 0.0865330722761432, 'sine_entropy_const': 0.09877731096714809, 'prior_uniform_const_times_eps': 0.012836058899258247, 'gaussian_var_const': 0.0009885864483913608}
+airy I {'mu': 3.0, 'L': 57, 'eps': 0.001764, 'S_I': 4.541561, 'S_sqrt_eps': 0.190753, 'leading': 0.037088, 'S_minus_logs': 0.037088}
+airy I {'mu': 10.0, 'L': 65, 'eps': 0.000833, 'S_I': 5.864164, 'S_sqrt_eps': 0.169227, 'leading': 0.050008, 'S_minus_logs': 0.050008}
+airy I {'mu': 30.0, 'L': 77, 'eps': 0.000411, 'S_I': 7.487493, 'S_sqrt_eps': 0.151723, 'leading': 0.059771, 'S_minus_logs': 0.059771}
+airy I {'mu': 100.0, 'L': 95, 'eps': 0.000186, 'S_I': 9.946226, 'S_sqrt_eps': 0.135763, 'leading': 0.068022, 'S_minus_logs': 0.068022}
+airy I {'mu': 300.0, 'L': 120, 'eps': 9e-05, 'S_I': 13.089539, 'S_sqrt_eps': 0.124151, 'leading': 0.073511, 'S_minus_logs': 0.073511}
+airy I {'mu': 1000.0, 'L': 159, 'eps': 4e-05, 'S_I': 17.980704, 'S_sqrt_eps': 0.114262, 'leading': 0.077753, 'S_minus_logs': 0.077753}
+airy I {'mu': 3000.0, 'L': 213, 'eps': 1.9e-05, 'S_I': 24.362729, 'S_sqrt_eps': 0.10737, 'leading': 0.080429, 'S_minus_logs': 0.080429}
+airy II1 {'mu': 3.0, 'L': 57, 'eps': 0.001956, 'D_II1': 0.857713, 'D_sqrt_eps': 0.037934, 'leading': 0.108302}
+airy II1 {'mu': 10.0, 'L': 65, 'eps': 0.000874, 'D_II1': 1.420937, 'D_sqrt_eps': 0.042006, 'leading': 0.101308}
+airy II1 {'mu': 30.0, 'L': 77, 'eps': 0.000419, 'D_II1': 2.353235, 'D_sqrt_eps': 0.048192, 'leading': 0.096881}
+airy II1 {'mu': 100.0, 'L': 95, 'eps': 0.000188, 'D_II1': 4.043758, 'D_sqrt_eps': 0.055408, 'leading': 0.093518}
+airy II1 {'mu': 300.0, 'L': 120, 'eps': 9e-05, 'D_II1': 6.474689, 'D_sqrt_eps': 0.061498, 'leading': 0.091403}
+airy II1 {'mu': 1000.0, 'L': 159, 'eps': 4e-05, 'D_II1': 10.575757, 'D_sqrt_eps': 0.067236, 'leading': 0.089807}
+airy II1 {'mu': 3000.0, 'L': 213, 'eps': 1.9e-05, 'D_II1': 16.231453, 'D_sqrt_eps': 0.071545, 'leading': 0.08881}
+gauss {'s': 2.0, 'L': 52, 'eps': 0.00050645, 'var_level_eps': 0.0009733, 'var_lnh_eps': 0.00122652}
+gauss {'s': 4.0, 'L': 84, 'eps': 0.0001281, 'var_level_eps': 0.00098473, 'var_lnh_eps': 0.00104878}
+gauss {'s': 8.0, 'L': 148, 'eps': 3.212e-05, 'var_level_eps': 0.00098762, 'var_lnh_eps': 0.00100368}
+gauss {'s': 16.0, 'L': 276, 'eps': 8.04e-06, 'var_level_eps': 0.00098835, 'var_lnh_eps': 0.00099236}
+gauss {'s': 32.0, 'L': 532, 'eps': 2.01e-06, 'var_level_eps': 0.00098853, 'var_lnh_eps': 0.00098953}
+gauss {'s': 64.0, 'L': 1044, 'eps': 5e-07, 'var_level_eps': 0.00098857, 'var_lnh_eps': 0.00098882}
+gauss {'s': 128.0, 'L': 2068, 'eps': 1.3e-07, 'var_level_eps': 0.00098858, 'var_lnh_eps': 0.00098865}
+sine {'L': 3000, 'eps': 9.025700502197863e-09, 'S_sqrt_eps': 0.09971753317679491}
+C4 {'L': 60, 's': 4.0, 'eps': 0.000128, 'H2': np.float64(0.015547), 'H2_over_eps': np.float64(121.369835), 'var_log2T': np.float64(16.123008), 'HCR_bound': np.float64(15.829808)}
+C4 {'L': 120, 's': 8.0, 'eps': 3.2e-05, 'H2': np.float64(0.003902), 'H2_over_eps': np.float64(121.5), 'var_log2T': np.float64(64.081369), 'HCR_bound': np.float64(63.81252)}
+C4 {'L': 240, 's': 16.0, 'eps': 8e-06, 'H2': np.float64(0.000976), 'H2_over_eps': np.float64(121.5), 'var_log2T': np.float64(256.081369), 'HCR_bound': np.float64(255.812505)}
+Abstract spectral checks complete; no physical energy or cosmological bound is inferred.
+done

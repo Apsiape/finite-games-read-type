@@ -1,0 +1,129 @@
+{
+  "exact_unweighted_fms_loss": "2*a**2 - 2*sqrt(2)*a*b + b**2",
+  "forced_flag_to_corner_density_ratio": "b^2/a^2=2",
+  "predicate_matches_pairs": 25,
+  "full_kms_pairs_checked": 2070,
+  "supported_pairs": 243,
+  "full_kms_min_probability": 0.0,
+  "finite": [
+    {
+      "L": 1,
+      "kind": "uniform",
+      "dimension": 27,
+      "loss": 0.018518518518518517,
+      "predicted_loss": 0.018518518518518514,
+      "entropy_nats": 3.236945348176138,
+      "entropy_error": 4.440892098500626e-16,
+      "normalization_error": 1.3322676295501878e-15,
+      "uniform_mixture_error": 1.1102230246251565e-16,
+      "links_lossless": true,
+      "full_52650_event_max_limit_error": 0.44444444444444436,
+      "full_affine_scaling_error": null
+    },
+    {
+      "L": 3,
+      "kind": "uniform",
+      "dimension": 135,
+      "loss": 0.009259259259259259,
+      "predicted_loss": 0.009259259259259259,
+      "entropy_nats": 4.623239709296031,
+      "entropy_error": 2.6645352591003757e-15,
+      "normalization_error": 4.440892098500626e-16,
+      "uniform_mixture_error": 1.1102230246251565e-16,
+      "links_lossless": true,
+      "full_52650_event_max_limit_error": 0.22222222222222276,
+      "full_affine_scaling_error": 3.552713678800501e-15
+    },
+    {
+      "L": 5,
+      "kind": "uniform",
+      "dimension": 567,
+      "loss": 0.00617283950617284,
+      "predicted_loss": 0.006172839506172842,
+      "entropy_nats": 5.721851997964151,
+      "entropy_error": 1.3322676295501878e-14,
+      "normalization_error": 6.661338147750939e-16,
+      "uniform_mixture_error": 1.6653345369377348e-16,
+      "links_lossless": true,
+      "full_52650_event_max_limit_error": 0.14814814814814914,
+      "full_affine_scaling_error": 1.0325074129013956e-14
+    },
+    {
+      "L": 2,
+      "kind": "sine",
+      "dimension": 63,
+      "loss": 0.016460905349794244,
+      "predicted_loss": 0.01646090534979424,
+      "entropy_nats": 2.890371757896165,
+      "entropy_error": 0.0,
+      "normalization_error": 2.220446049250313e-16,
+      "uniform_mixture_error": 0.0,
+      "links_lossless": true,
+      "full_52650_event_max_limit_error": null,
+      "full_affine_scaling_error": null
+    },
+    {
+      "L": 3,
+      "kind": "sine",
+      "dimension": 135,
+      "loss": 0.008230452674897118,
+      "predicted_loss": 0.00823045267489712,
+      "entropy_nats": 3.9300925287360813,
+      "entropy_error": 1.3322676295501878e-15,
+      "normalization_error": 2.220446049250313e-16,
+      "uniform_mixture_error": 0.0,
+      "links_lossless": true,
+      "full_52650_event_max_limit_error": null,
+      "full_affine_scaling_error": null
+    },
+    {
+      "L": 5,
+      "kind": "sine",
+      "dimension": 567,
+      "loss": 0.003143753179013212,
+      "predicted_loss": 0.003143753179013212,
+      "entropy_nats": 5.212754195031084,
+      "entropy_error": 7.993605777301127e-15,
+      "normalization_error": 2.220446049250313e-16,
+      "uniform_mixture_error": 0.0,
+      "links_lossless": true,
+      "full_52650_event_max_limit_error": null,
+      "full_affine_scaling_error": null
+    }
+  ],
+  "sine_scalar_large_L": [
+    {
+      "L": 10,
+      "loss": 0.0008056540527546737,
+      "entropy_nats": 7.65626769763443,
+      "loss_times_entropy_squared": 0.04722617977048578,
+      "loss_times_entropy": 0.006168303099573873
+    },
+    {
+      "L": 100,
+      "loss": 8.122463115529925e-06,
+      "entropy_nats": 41.152898567560314,
+      "loss_times_entropy_squared": 0.013755887247905713,
+      "loss_times_entropy": 0.0003342629007121529
+    },
+    {
+      "L": 1000,
+      "loss": 8.123124513306813e-08,
+      "entropy_nats": 355.3717173144468,
+      "loss_times_entropy_squared": 0.010258617384727556,
+      "loss_times_entropy": 2.886728708252922e-05
+    },
+    {
+      "L": 10000,
+      "loss": 8.123131127502151e-10,
+      "entropy_nats": 3476.836614929596,
+      "loss_times_entropy_squared": 0.009819560021625033,
+      "loss_times_entropy": 2.8242799731973814e-06
+    }
+  ],
+  "peak_working_set_bytes": 151109632,
+  "elapsed_seconds": 5.414471100084484,
+  "input_sha256": {
+    "base-game.json": "bdf7bc03f67e81adbaadd174f9d5e3229b231d953f9a2f2198628a0d3058a89b"
+  }
+}

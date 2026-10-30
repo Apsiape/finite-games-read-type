@@ -1,0 +1,170 @@
+\section{Type versus price}\label{sec:phase}
+For finite rational games, commuting value one is attained; bounded dimension cost is equivalent to a finite-dimensional perfect strategy, and a normal type-I perfect host precludes a quantum value gap. A matrix rank/dilation-defect inequality with sharp leading constant $\pi$ converts a proved power bound on the defect into an exponential dimension lower bound. It does not characterize all type-III-only games. Published quantitative games and $\GIII$ give polynomial, exponential and value-gap examples of minimum type II, and exponential and value-gap examples of minimum type III. Every $\Delta^0_2$ exponent in $[1/2,1]$ is realized by a type-III-only game; every positive finite existing exponent is $\Delta^0_2$. The game $\GIII$ attains the exponent floor within the first-order certification class. The perfect-commuting language is $\Pi^0_1$-complete; type-III-only hosting is d.r.e.-hard, and its intersection with quantum value one is $\Pi^0_2$-hard as an unpromised language. Exact arithmetical classification, the promised-input strengthening and the universal type-to-price law remain open here. The precise decoupling is that minimum type II does not select a unique price class, and exponential price does not determine whether the minimum type is II or III.
+
+Write $\omega_q=\sup_d\omega_d$ and $\omega_{qc}$ for the commuting value. Among hosted games let the \emph{minimum host class} be the least of
+\[
+ \text{finite matrices}<\mathrm I_\infty<\mathrm{II}<\mathrm{III}.
+\]
+Here II includes $\mathrm{II}_1$ and $\mathrm{II}_\infty$; ``finite matrices'' does not include finite type-II algebras. The last class means that every perfect normal host is nonsemifinite. Set $D_G(\eps)=\infty$ if the specified loss is infeasible.
+
+\subsection{Standard attainment and truncation facts}
+\begin{proposition}[Standard compactness and truncation]\label{prop:attainment}
+Every finite game of commuting value one has a perfect normal strategy on a factor with separable predual. Its dimension cost is bounded as $\eps\downarrow0$ exactly when a matrix factor hosts it. If it has a normal type-I perfect host with pure Schmidt weights $(\lambda_k)$, then
+\[
+ D_G(\eps)\le\min\{d: \textstyle\sum_{k>d}\lambda_k\le\eps/2\}<\infty.
+\]
+In particular a type-I perfect host implies $\omega_q=1$.
+\end{proposition}
+\begin{proof}
+These are standard recoveries, not new compactness results \cite{NPA,MNY}. The compact state space of the universal measurement algebras' maximal tensor product maps continuously onto $C_{qc}$, so the payoff attains its maximum. Separable GNS and central decomposition of Alice's generated algebra give factor fibers. Bob commutes with its center and is decomposable; finitely many nonnegative losing terms vanish on almost every fiber. The vector states are normal.
+
+Fixed-dimensional states and POVMs form a compact set, proving the bounded-cost equivalence. A normal type-I representation is an amplification, hence spatial. From a perfect mixed state select a pure zero-loss component and write $\psi$ in Schmidt form. If $t_d=\sum_{k>d}\lambda_k$, its normalized truncation obeys, for the positive loss contraction $L$ with $L\psi=0$,
+\[
+ \langle\psi_d,L\psi_d\rangle\le\|\psi_d-\psi\|^2
+       =2-2\sqrt{1-t_d}\le2t_d.
+\]
+Compress both POVMs to the corresponding Schmidt subspaces.
+\end{proof}
+
+\subsection{A quantitative implication from dilation defect}
+For $r>1$ define
+\[
+ H_r(h)^2=\int_0^\infty\left(\sqrt{p(t)}-\sqrt{rp(rt)}\right)^2dt,
+ \qquad p=\mu(h),\quad\int p=1.
+\]
+At each \emph{feasible} loss $\eps$, let $\delta_{G,r}(\eps)$ be the supremum of $H_r(\rho_A)$ over finite-dimensional strategies of loss at most $\eps$, using the canonical counting trace on matrices. Let $\delta^{\rm sf}_{G,r}$ use all normal semifinite strategies where this set is nonempty. No positive modulus is assigned to an empty strategy set. A power certificate means $\delta_{G,r}(\eps)\le C\eps^\gamma$; first-order certification means $\gamma=1/2$.
+
+\begin{theorem}[Matrix rank and dilation defect]\label{thm:rank-defect}
+For each $r>1$ there is $c_r>0$ such that a matrix density of rank $R$ and defect $0<H=H_r\le c_r$ satisfies
+\begin{equation}\label{eq:rank-defect}
+ \log_r R\ge\frac\pi H-2\log_r(1/H)-3.
+\end{equation}
+One may take $c_2=.05$. The leading coefficient $\pi$ is sharp for matrix densities. Consequently, at feasible losses with $0<\delta_{G,r}(\eps)\le c_r$, the same bound holds for $\log_r D_G(\eps)$ with $H$ replaced by $\delta_{G,r}(\eps)$. A proved power bound on the defect gives an exponential dimension lower bound. Vanishing $\delta^{\rm sf}_{G,r}(\eps)$ as $\eps\downarrow0$ implies semifinite exclusion.
+\end{theorem}
+\begin{proof}
+Put $f(s)=(\ln r)r^sp(r^s)$ and $g=\sqrt f$. Then $\|g\|_2=1$ and $H^2=\int|g(s+1)-g(s)|^2ds$. The matrix bottom plateau $p=\lambda_1$ on $(0,1]$ gives
+\[
+ \lambda_1\le a_rH^2,\qquad a_r=\frac r{(\sqrt r-1)^2}.
+\]
+Cut $g$ below the nonintegral point $s_0=2\log_rH$. For $H<r^{-1/2}$ the crossing edges lie in the exponential tail. The removed mass and the cut function's energy satisfy
+\[
+ d=\lambda_1r^{s_0}\le a_rH^4,\quad M=1-d,\qquad
+ E\le H^2+2(\sqrt r-1)d.
+\]
+Indeed deleting edges wholly below $s_0$ saves $(\sqrt r-1)^2d$, while replacing crossing edges by zero-boundary edges costs $(r-1)d$; their difference is $2(\sqrt r-1)d$. The retained interval has length $B=\log_rR+2\log_r(1/H)$. Fiber modulo one. Each fiber has at most $B+1$ sites, so the exact Dirichlet ground energy gives $E\ge4\sin^2(\pi/(2(B+2)))M$. Therefore
+\[
+ \log_rR\ge\frac\pi{2\arcsin z_r(H)}-2\log_r(1/H)-2,
+ \quad z_r(H)=\frac H2\sqrt{\frac{1+b_rH^2}{1-a_rH^4}},
+ \quad b_r=2(\sqrt r-1)a_r.
+\]
+For $r=2$ and $H\le.05$, the square-root factor is at most $1+4.9H^2$. Using
+\[
+ \frac{\arcsin z}{z}\le1+\frac{z^2}{6(1-z^2)^{3/2}}
+\]
+gives $2\arcsin z_2(H)\le H(1+5H^2)$, hence $\pi/(2\arcsin z_2(H))\ge\pi/H-5\pi H>\pi/H-1$. This proves the stated remainder. For fixed $r$, the difference from $\pi/H$ is $O_r(H)$; decrease $c_r$ to bound it by one and make the right side of \eqref{eq:rank-defect} decreasing in $H$. Substitution of $H\le\delta$ proves the game inequality.
+
+For sharpness fix $a>2/\ln r$. On $[a,L]$ use normalized sine amplitude $g(s)\propto\sin(\pi s/L)$, continue below $a$ by $g(a)r^{(s-a)/2}$ and set it zero above $L$. The corresponding $p$ is constant at the bottom and decreasing above, since its logarithmic derivative is at most $2/a-\ln r<0$. The cap contributes $O_r(L^{-3})$ to mass and energy, while the bulk shift energy is $\pi^2/L^2+O_r(L^{-3})$. Average $p$ on unit trace intervals. The squared $L^2$ error of the square-root densities is $O_r(L^{-3})$, by summing cell oscillations and bounding $\int|(\sqrt p)'|^2$. The dilation difference operator has norm at most two. Thus $H=\pi/L+o(L^{-1})$, $R=\lceil r^L\rceil$, and $(\log_rR)H\to\pi$.
+
+Finally $H_r(h)>0$ for every normal semifinite density: zero would give a nonzero finite translation-invariant probability law $f(s)ds$. A perfect strategy would be counted at every positive loss and contradict a vanishing semifinite modulus.
+\end{proof}
+The matrix plateau is essential; diffuse densities need not obey this rank argument. In the displayed $\GIII$ proof, Theorem~\ref{thm:price} supplies $H_2\le\sqrt{C_R\eps}$, so
+\[
+ \log_2D_{\GIII}(\eps)\ge\frac\pi{\sqrt{C_R\eps}}
+             -O(\log(1/\eps)).
+\]
+The sine construction gives the matching exponent and upper coefficient $\pi\sqrt{2/243}$. Robustness supplies the rate in this proof; exclusion and fixed-dimensional compactness alone give divergence. No impossibility theorem about other proofs is asserted. Nor is there a converse to the defect implication: flat marginals satisfy $H_r(I_d/d)^2=2(1-r^{-1/2})$, independent of $d$, even in the exponentially expensive examples below.
+
+\subsection{Composition, type-II examples and programmable exponents}
+Define $G_1\wedge G_2$ by product questions and answers, winning exactly when both components win. For $G_1\vee G_2$, every product-question answer carries a mode $b\in\{1,2\}$ and an answer for that component. With probability $1/2$ play product questions and test agreement of modes and the selected game; with probability $1/4$ each, send a mode-only question $M$ to one party and a uniform product question to the other, testing just mode agreement. Remove questions of zero marginal weight first. The two mode stars and a supported product edge make the mode graph connected.
+
+\begin{proposition}[AND/OR hosting and prices]\label{prop:boolean}
+If $M$ hosts $G_1\wedge G_2$, it hosts both components. Hosts $M_1,M_2$ give a host $M_1\bar\otimes M_2$ for the product. For every factor $M$,
+\[
+ M\text{ hosts }G_1\vee G_2\iff
+ M\text{ hosts }G_1\text{ or }G_2.
+\]
+When the relevant hosts exist, minimum host classes take maximum for AND and minimum for OR. Dimension costs satisfy
+\begin{align*}
+ \max_iD_i(\eps)&\le D_{G_1\wedge G_2}(\eps)
+                  \le D_1(\eps/2)D_2(\eps/2),\\
+ \min_iD_i(C\eps)&\le cD_{G_1\vee G_2}(\eps),\qquad
+ D_{G_1\vee G_2}(\eps)\le\min_iD_i(2\eps)
+\end{align*}
+for fixed positive $c,C$ and sufficiently small feasible $\eps$.
+\end{proposition}
+\begin{proof}
+For AND, fix unused questions and coarse-grain their answers. At positive loss select a pair by averaging. Tensor strategies and the union bound give the upper bound; tensor products give the stated maximum of coarse host classes.
+
+For perfect OR, support reduction and Lemma~\ref{lem:classes}, propagated through the connected mode graph, give one centralizer projection $z$ and its commutant mirror, not a central projection. If $\phi(z)>0$, condition on $z\xi$ and restrict to $zMz$; coarse-graining the unused component gives a perfect $G_1$ strategy. Otherwise use $1-z$ and $G_2$. A corner host extends to $M$: its standard vector lies in $zJzJL^2(M)$, left and right effects sum to $z$ and $JzJ$, and completing on their complements preserves commutation and correlations. Constant mode gives the converse.
+
+For approximate OR select a pure component of no greater loss, then use common local Naimark dilations of constant dimension cost. All mode and fine effects are projections. The smallest supported question weight $\mu_0>0$ bounds each mode-disagreement norm by $\sqrt{\eps/\mu_0}$. Paths in the mode graph give vector distances $\eta=K\sqrt\eps$. Choose a mode at $M$ with Alice weight at least $1/2$, with mode projections $P,Q$ on the two parties, and put $\theta=PQ\psi$. Then
+\[
+ \|\theta\|^2\ge\tfrac12-\eta^2,\qquad
+ \|\theta-A_x^bB_y^b\psi\|\le2\eta.
+\]
+The losing fine projections in that mode sum to a projection $L_{xy}^b$ supported on $A_x^bB_y^b$. Hence
+\[
+ \|L_{xy}^b\theta\|\le\sqrt{\eps/\mu_0}+2\eta.
+\]
+On normalized $\theta$ this is loss $O(\eps)$. Compress fine measurements to $P,Q$. Their missing effects $P(1-A_x^b)P$ and $Q(1-B_y^b)Q$ have expectation $O(\eta^2)$ on $\theta$; assign each to one allowed answer. This completes the POVMs at extra loss $O(\eps)$. Fix and coarse-grain unused questions by averaging to extract $G_b$ in dimension at most $c$ times the original. Constant-mode play gives the OR upper bound, since only its product-question half can lose. These are inequalities, not literal maximum/minimum identities of price functions.
+\end{proof}
+
+\begin{proposition}[An exponential game of minimum type II]\label{prop:ii-exp}
+The authors' explicit linear-system game $G_{\rm ex}$ has a $\mathrm{II}_1$ factor host and no normal type-I host, while $\omega_q(G_{\rm ex})=1$ and $\log D_{G_{\rm ex}}(\eps)=\eps^{-1+o(1)}$ \cite{Explicit}.
+\end{proposition}
+\begin{proof}
+Commuting perfection follows from Proposition~\ref{prop:attainment}. The solution-group criterion \cite[Theorems 4--5]{CLS} makes its central involution $J$ nontrivial. In $L(\Gamma)$, $p=(1-J)/2$ has trace $1/2$. Left/right regular play on $L(\Gamma)p$, with vector $\sqrt2p\delta_e$, is perfect and tracial. A nonzero type-I part of this finite algebra would disintegrate into matrices; one fiber would detect $J=-1$ and yield finite perfect play, which this game excludes. Thus its factor decomposition supplies a $\mathrm{II}_1$ host. Perfect spatial linear-system play in any dimension implies finite perfect play \cite[Theorem 3.2]{SloNonclosure}; normal type-I hosting is spatial, so no such host exists.
+\end{proof}
+The regular algebra need not be a factor. This argument identifies neither arbitrary ambient type-III hosts nor approximation properties of its canonical regular correlation. The polynomial type-II example of Slofstra--Vidick \cite{SV} has its matching $D=\Theta(\eps^{-1/2})$ sharpening in the authors' explicit-game paper \cite{Explicit}; the original bounds in \cite{SV} have unequal exponents. The general constraint-system examples in \cite{Uncomputable} also have minimum type II: shared variable mirrors make the generated state tracial; a matrix summand gives finite perfect play. In a spatial perfect strategy the trace-class marginal commutes with these generators, and any positive eigenvalue gives a finite invariant eigenspace and finite perfect play. This rules out type I when finite perfection is absent. The earlier type-II tracial-limit mechanism and dimension divergence are discussed in \cite{Precision}.
+
+\begin{theorem}[Positive finite exponent spectrum]\label{thm:exponents}
+Let $\mathcal E_{\rm III}^+$ comprise the positive finite existing limits $\beta(G)=\lim_{\eps\downarrow0}\log\log D_G(\eps)/\log(1/\eps)$ for rational type-III-only games with $\omega_q=1$. Then
+\[
+ \Delta^0_2\cap[1/2,1]\ \subseteq\ \mathcal E_{\rm III}^+
+       \ \subseteq\ \Delta^0_2\cap(0,\infty).
+\]
+The upper restriction holds for every rational game with quantum value one and a positive finite existing exponent. Within the first-order certification class the lower exponent floor is $1/2$, attained by $\GIII$.
+\end{theorem}
+\begin{proof}
+The authors' realization theorem \cite[Theorems 1.1 and 1.3]{Uncomputable} supplies fixed rational constraint games $G_\beta$ with $\log D_{G_\beta}=\eps^{-\beta+o(1)}$ for every $\Delta^0_2$ real $0<\beta\le1$. Put $G=\GIII\wedge G_\beta$. Tensor hosts and approximants give type-III-only hosting and quantum value one. The correct sandwich is
+\[
+ \max\{\log D_{\GIII}(\eps),\log D_{G_\beta}(\eps)\}
+ \le\log D_G(\eps)
+ \le\log D_{\GIII}(\eps/2)+\log D_{G_\beta}(\eps/2).
+\]
+Thus $\beta(G)=\max\{1/2,\beta\}$, proving realization, including noncomputable exponents. For the converse, fixed-dimensional feasibility at rational loss $\le\eps$ is a compact rational semialgebraic decision problem. Quantifier elimination and increasing dimension search compute the actual $D_G(\eps)$ under $\omega_q=1$, including equality at the threshold. Computable rational approximations to $\log(1+\log D_G(2^{-n}))/(n\ln2)$ have the same finite limit, which is $\Delta^0_2$ by the limit lemma; compare \cite[Proposition P6.1]{Uncomputable}. The first-order floor follows from Theorem~\ref{thm:rank-defect}. This proves no universal positive floor, ceiling at one, or existence of a limit for arbitrary games.
+\end{proof}
+
+\subsection{Complexity and the settled cells}
+For rational encoded games put $\mathrm{PERF}=\{G: \omega_{qc}(G)=1\}$, let $\mathrm{SEMI}$ mean existence of a normal semifinite factor host, and put $\mathrm{III\!\text{-}\!ONLY}=\mathrm{PERF}\setminus\mathrm{SEMI}$ and $Z=\{G: \omega_q(G)=1\}$.
+\begin{theorem}[Unpromised complexity lower bounds]\label{thm:type-complexity}
+$\mathrm{PERF}$ is $\Pi^0_1$-complete (a prior result). The language $\mathrm{III\!\text{-}\!ONLY}$ is d.r.e.-hard under computable many-one reductions, and $\mathrm{III\!\text{-}\!ONLY}\cap Z$ is $\Pi^0_2$-hard as an unpromised language. The exact arithmetical placement of type-III-only hosting remains open here.
+\end{theorem}
+\begin{proof}
+Mousavi--Nezhadi--Yuen \cite[Theorems 6.4 and 6.9]{MNY} give $\Pi^0_1$-completeness of exact commuting value one and $\Pi^0_2$-completeness of exact quantum value one. The first also follows from the bounded NPA moment hierarchy \cite{NPA} and Slofstra's effective embedding \cite[Corollary 3.3]{SloEmbedding}. Finite-level non-strict perfect moment feasibility is decidable and holds at every level exactly for commuting perfection.
+
+Uniformly choose linear-system games $L_X$ perfect exactly when machine $X$ never halts. Their perfect strategies have regular tracial hosts, so $\mathrm{SEMI}=\mathrm{PERF}$ on these games. With $H=\GIII$, set $F(P,Q)=(H\wedge L_P)\vee L_Q$. The AND branch always excludes semifinite hosts and is hosted exactly when $P$ never halts; the OR alternative has a semifinite host exactly when $Q$ never halts. Hence
+\[
+ F(P,Q)\in\mathrm{III\!\text{-}\!ONLY}
+ \iff Q\text{ halts and }P\text{ never halts}.
+\]
+Choosing the two halting sets independently reduces every difference of r.e. sets. In particular this language is neither r.e. nor co-r.e. Finally $L\mapsto H\wedge L$ reduces $Z$ to $\mathrm{III\!\text{-}\!ONLY}\cap Z$: product value one is equivalent to $\omega_q(L)=1$, and on those instances a tensor host exists. No-instances need not map into $Z$, so this is not hardness under a value-one promise.
+\end{proof}
+Lin's $\mathsf{MIP}^{co}=\mathsf{coRE}$ \cite[Theorem 1.1]{Lin} is the prior gapped commuting counterpart; Ji--Natarajan--Vidick--Wright--Yuen \cite{JNVWY} establish the gapped quantum complexity and value-separation context. Neither identifies the arithmetical complexity of semifinite hosting.
+
+For regular profiles write B for bounded cost; L for unbounded subpolynomial cost; P for polynomial cost; SPE for superpolynomial cost with subpower $\log D$; E for an exponential lower bound $\log D\ge c\eps^{-\gamma}$ for some $c,\gamma>0$; and gap for $\omega_q<1$. These labels are not asserted to partition all oscillatory profiles. A plus denotes a construction, a minus an impossibility, and a question mark an open cell.
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Minimum host & B & L & P & SPE & E & gap\\
+\midrule
+Finite matrices & $+$ & $-$ & $-$ & $-$ & $-$ & $-$\\
+$\mathrm I_\infty$ & $-$ & $+$ & $?$ & $?$ & $?$ & $-$\\
+II & $-$ & $?$ & $+$ & $?$ & $+$ & $+$\\
+III only & $-$ & $?$ & $?$ & $?$ & $+$ & $+$\\
+\bottomrule
+\end{tabular}
+\end{center}
+There are sixteen settled cells and eight open cells. Magic square fills finite/B. The authors' base game has spatial perfection, no finite perfection and $D=10\log_2(1/\eps)+O(\log\log(1/\eps))$ \cite{Base}, filling $\mathrm I_\infty$/L. Proposition~\ref{prop:attainment} excludes every other finite row cell, all nonfinite/B cells and type-I/gap. The II/P and II/E constructions are those above. Gao--Yu--Zhi's explicit binary linear-system game $G_{\rm gap}$ satisfies $\omega_q<1=\omega_{qc}$ \cite[Theorems 1.1--1.2]{GYZ}; its regular tracial sector and type-I exclusion fill II/gap. The games $\GIII$ and $\GIII\wedge G_{\rm gap}$ fill III/E and III/gap. Exponential dimension witnesses already occur in Coladangelo's two-player construction \cite{Coladangelo} and Ji--Leung--Vidick's three-player coherent-embezzlement construction \cite{JLV}; these are prior quantitative phenomena with different task hypotheses.
+
+Only games with a proved defect power certificate inherit the corresponding spectral exclusions; a necessary ladder alone supplies no price theorem. The settled cells show exactly this decoupling: minimum type II does not select a unique price class, and exponential price does not determine whether the minimum type is II or III. They do not establish full independence or settle whether every type-III-only value-one game has exponential price.

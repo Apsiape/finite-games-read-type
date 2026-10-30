@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: Please cite the paper; this distribution supplies its source and finite checks.
+type: software
+title: "Finite games that read the type of a von Neumann algebra"
+version: 1.0.0
+date-released: '2026-10-29'
+license:
+- CC-BY-4.0
+- MIT
+- Apache-2.0
+authors:
+- family-names: Douglas
+  given-names: Seth
+- family-names: Mghirbi
+  given-names: Nidhal
+abstract: "We construct finite two-player games with binary scoring whose normal strategies distinguish operator-algebraic type. A 243-pair game has perfect play in type III and none when either ambient algebra is semifinite. For factors with separable predual, hosting it is equivalent to an invariant normal state on the flow of weights, or to an expected hyperfinite type III1 subfactor. Prepared-state hosting is therefore insensitive to the ratio invariant throughout the injective flow-finite class. A different quantifier recovers that invariant: every faithful normal state has value one for the flagged magic-square game exactly when 1/2 belongs to the Connes invariant; a nine-question conference-basis game gives the corresponding criterion for 1/3. Together these two response properties characterize type III1. One prepared state already wins both games in dimension 25. We prove that every positive rational is forced as a modular ratio by some finite game, and identify the exact rational orthogonal-pair single-bridge parameters. For the type-III-only game, a robust sorted spectral law holds for every normal semifinite strategy. It yields matching entropy, deficit, dimension and variance exponents, including an exponential inverse-square-root dimension law. No validated numerical constant is given; the sharp constant is conjectural. We give explicit finite templates, retain their boundary penalties, and distinguish sorted trace position from log density. The specified normal semifinite perturbative gravitational models cannot attain perfect play, whereas suitable type III quantum-field-theory hosts can. This conditional algebraic consequence gives no preparation or energy bound."
+preferred-citation:
+  type: generic
+  title: "Finite games that read the type of a von Neumann algebra"
+  authors:
+  - family-names: Douglas
+    given-names: Seth
+  - family-names: Mghirbi
+    given-names: Nidhal
+  year: 2026
+  version: 1.0.0
+  notes: 'Preprint. Text: CC BY 4.0. Scripts: MIT or Apache 2.0; see RIGHTS.md.'

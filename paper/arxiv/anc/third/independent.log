@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "pairs": 81,
+  "events": 2025,
+  "forbidden": 732,
+  "exact_loss": "0",
+  "all_PVMs_exact": true,
+  "input_predicate_identical_on_all_events": true,
+  "rigidity": [
+    {
+      "ray": 0,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "--+"
+        ],
+        [
+          "C1",
+          "+++"
+        ],
+        [
+          "C2",
+          "-+-"
+        ],
+        [
+          "C3",
+          "+-+"
+        ]
+      ],
+      "sum_rank_exact": 3,
+      "null_projector_equals_conference": true
+    },
+    {
+      "ray": 1,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "+--"
+        ],
+        [
+          "C1",
+          "+--"
+        ],
+        [
+          "C2",
+          "+++"
+        ],
+        [
+          "C3",
+          "-++"
+        ]
+      ],
+      "sum_rank_exact": 3,
+      "null_projector_equals_conference": true
+    },
+    {
+      "ray": 2,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "+++"
+        ],
+        [
+          "C1",
+          "--+"
+        ],
+        [
+          "C2",
+          "--+"
+        ],
+        [
+          "C3",
+          "---"
+        ]
+      ],
+      "sum_rank_exact": 3,
+      "null_projector_equals_conference": true
+    },
+    {
+      "ray": 3,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "-+-"
+        ],
+        [
+          "C1",
+          "-+-"
+        ],
+        [
+          "C2",
+          "+--"
+        ],
+        [
+          "C3",
+          "++-"
+        ]
+      ],
+      "sum_rank_exact": 3,
+      "null_projector_equals_conference": true
+    }
+  ],
+  "classical_perfect_strategy": false,
+  "classical_search_nodes": 32,
+  "peak_working_set_MB": 113.3125,
+  "seconds": 0.9715159001061693,
+  "input_game_sha256": "802c97c9480ba1299ee1eb46eab9fe428c49bb51769e30900088f8dcc2e90e9d"
+}

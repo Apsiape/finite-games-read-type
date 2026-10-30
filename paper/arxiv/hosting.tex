@@ -1,0 +1,108 @@
+\section{Prepared-state hosting and the flow of weights}\label{sec:hosting}
+\subsection{Expected-inclusion transfer and explicit hosts}
+\begin{lemma}[Transfer along expectations]\label{lem:transfer}
+Let $E:M\to P$ be a faithful normal conditional expectation and let $\phi=\phi_P\circ E$ for a faithful normal state on $P$. Every standard-form correlation on $(P,\phi_P)$ is a correlation on $(M,\phi)$.
+\end{lemma}
+\begin{proof}
+The space $K=\overline{P\xi_\phi}$ identifies with $L^2(P,\phi_P)$. Takesaki's expectation theorem \cite{Takesaki} makes $P$ modularly invariant. The orthogonal projection onto $K$ commutes with the modular objects, and the Tomita operators agree on $P\xi_\phi$. Thus $J_M|_K=J_P$. For $A,B\in P$,
+\[
+ \langle\xi_\phi,AJ_MB J_M\xi_\phi\rangle
+ =\langle\xi_{\phi_P},AJ_PB J_P\xi_{\phi_P}\rangle.
+\]
+Embedding the left effects and using $J_MB J_M$ for the right effects preserves positivity, sums and every probability. The same identity transfers normal measurable POVMs for infinite games when those games and their integrals are defined; the finite-game compactness theorem below has a separate finiteness premise. Support compression handles nonfaithful starting marginals. Expectations compose.
+\end{proof}
+In the uniform KMS representation of the Cuntz algebra $\mathcal O_2$, let $s_i^*s_k=\delta_{ik}$, $\sum_i s_is_i^*=1$, and $\sigma_t(s_i)=2^{-it}s_i$. Its weak closure is $R_{1/2}$; these are established KMS and factor facts \cite{CK,Harris}. On $M_9\bar\otimes R_{1/2}$ take $\phi=\mathrm{tr}_9\otimes\varphi$. For each of the four pairs
+\[
+ \{j+1,j+2\},\ \{j+3,j+4\},\ \{j+5,j+6\},\ \{j+7,j+8\}
+\]
+put
+\[
+ F_a=e_{aa}\otimes1,\qquad W_{j;a,b}=e_{aj}\otimes s_1^*+e_{bj}\otimes s_2^*.
+\]
+Then $W^*W=F_j$, $WW^*=F_a+F_b$ and $\sigma_t(W)=2^{it}W$. With $U_0=F_j$ and $U_1,\ldots,U_4$ these four maps, $E_{ab}=U_aU_b^*$ are unital $M_5$ matrix units with weights $d=(1,2,2,2,2)$. Embed each real ideal effect $P$ as $A_P=\sum P_{ab}E_{ab}$ and Bob's as $JA_QJ$. Standard form gives
+\begin{equation}\label{eq:block}
+ \langle\xi,A_PJA_QJ\xi\rangle
+ =\phi(F_j)\sum_{a,b}P_{ab}Q_{ba}\sqrt{d_ad_b}.
+\end{equation}
+Since $\phi(F_j)=1/9$, these are precisely the ideal probabilities of $\Psi_2$. The label measurement is $\{JF_aJ\}$. Both link partitions are centralizer partitions, so they match perfectly. Finite matrix amplification preserves the factor type, giving the claimed $R_{1/2}$ strategy.
+
+There is an analogous explicit $R_{1/3}$ strategy for $\Gthree$. In $M_{13}\bar\otimes\pi_\varphi(\mathcal O_3)''$ with uniform KMS state set
+\[
+ F=e_{00}\otimes1,\qquad W_k=\sum_{i=1}^3e_{3(k-1)+i,0}\otimes s_i^*,\quad 1\le k\le4.
+\]
+The source is $F$ and the four orthogonal ranges partition $1-F$. Their eigenvalue is $3$, and the associated $M_5$ units have weights $(1,3,3,3,3)/13$. Formula~\eqref{eq:block} with denominator 13 gives the ideal $\Psi_3$ probabilities. The host identification is the uniform three-isometry case of the known Cuntz/KMS classification \cite[Theorem 4.9 and Example 4.13]{Harris}.
+
+\subsection{The forced expected subfactor}
+In any perfect $\GIII$ strategy let $V_j=w_j^*$ in \eqref{eq:ck}. They are a represented Cuntz--Krieger family for
+\[
+ A_{ja}=1\quad\Longleftrightarrow\quad a=j+1\text{ or }j+2.
+\]
+This nonpermutation graph is irreducible, every cycle has an exit, and every vertex projection is nonzero. The Cuntz--Krieger uniqueness theorem therefore makes the representation faithful \cite{CK}. The row sums are two and $\min(A^8)=1$. Return cycles of lengths five and nine give period one.
+
+The modular action on this algebra is the gauge action with parameter $-t\ln2$. Its restricted state is the unique critical KMS state at inverse temperature $\ln2$, by \cite[Theorem 4.3]{Graph}. Let $P=W^*(V_j)$. Periodic Fourier averaging identifies its centralizer with the weak closure of the fixed AF algebra. Primitivity makes its normalized trace unique and extremal by Perron--Frobenius convergence. Matrix sizes grow without bound, so this centralizer is a diffuse finite factor. Any central element of $P$ is in that centralizer; hence $P$ is a factor.
+
+The modular spectrum is $\{0\}\cup2^\Z$: admissible words supply every degree and periodicity excludes other positive values. Connes's factorial-centralizer criterion \cite[Corollary 3.2.7(a)]{Connes} identifies this with $S(P)$. Nuclearity gives injectivity of the weak closure, and its cyclic representation is separable. Injective-factor classification identifies $P$ with $R_{1/2}$ \cite{Connes76}. Takesaki gives the faithful normal state-preserving expectation $M\to P$.
+
+This argument takes place on faithful support. In a factor with a nonfaithful hosting state, exclusion first makes the factor type III, and a nonzero type-III corner is isomorphic to the whole factor. Transporting the expected inclusion through such an isomorphism gives an expected $R_{1/2}$ in $M$ itself. Conversely Lemma~\ref{lem:transfer} transfers the explicit strategy along any such expectation. This proves the first two equivalences of Theorem~\ref{thm:host}.
+
+\subsection{Halving on the core and the main equivalence}
+In the continuous core, let $\lambda(t)=h^{it}$ and use its canonical trace $\tau$. For bounded nonnegative $g$ compactly supported in $(0,\infty)$ and central $z\ge0$, \eqref{eq:ck} gives the \emph{halving law}
+\begin{equation}\label{eq:halving}
+ \mu_g(z):=\tau(zg(h))=2\tau(zg(h/2)).
+\end{equation}
+The same positive-integrable trace identity used in the exclusion proves this without unbounded cyclic permutations. Its integrability is explicit:
+\[
+ \tau(g(h))=\phi(1)\int_0^\infty g(r)\,\frac{dr}{r^2}<\infty.
+\]
+At $s=\ln2$, trace scaling gives
+\[
+ \tau(\theta_s(z)g(h/2))=\tfrac12\tau(zg(h)).
+\]
+Applying \eqref{eq:halving} to $\theta_s(z)$ shows $\mu_g\circ\theta_{\ln2}=\mu_g$. Choose $g$ with positive integral and average over a period:
+\[
+ \nu=\frac1{\mu_g(1)\ln2}\int_0^{\ln2}\mu_g\circ\theta_s\,ds.
+\]
+This is a normal state invariant under the entire flow. Factor corners have isomorphic flows, so the conclusion passes from faithful support to the original factor.
+
+We state the decisive analytic import exactly in the form needed: for a type-III factor with separable predual, an invariant normal state on its flow is equivalent to a normal expected embedding of $R_\infty$, and equivalent to such an embedding of every $R_\lambda$, $0<\lambda<1$ \cite[Theorem 3.5]{HM}. Lemma 3.4 there makes the expectation faithful after support reduction and type-III corner transport. No injectivity or bicentralizer assumption is required on the ambient factor. Combining this theorem, the halving law and transfer proves Theorem~\ref{thm:host}. Semifinite factors are excluded separately; their translation flow has no invariant normal probability state.
+
+\subsection{Examples and the exact scope of blindness}
+All separable-predual $\mathrm{III}_\lambda$ factors with $0<\lambda\le1$ host $\GIII$. Hosting does not imply $1/2\in S(M)$. Two examples also show directly how expected inclusions change subtype.
+
+Put $Q=R_{1/2}$, $T=2\pi/\ln2$, and $\gamma=\sigma_{T/2}$. It is an outer order-two automorphism, since $\gamma(s_i)=-s_i$. The crossed product $L=Q\rtimes_\gamma\Z_2$ is a factor with its Fourier expectation onto $Q$. If $u$ implements $\gamma$ and $p=(1+u)/2$, then $pLp\cong Q^\gamma$. Every even monomial is generated by $s_is_j$: when both word lengths are odd, insert $\sum_k s_ks_k^*=1$. Thus the fixed algebra is the weak closure of the uniform $\mathcal O_4$ representation, hence $R_{1/4}$. The nonzero corner and $L$ are isomorphic. Therefore $R_{1/4}$ contains expected $R_{1/2}$ and hosts the game.
+
+For a type-$\mathrm{III}_0$ example, let $t_0=2\pi/\ln3$ and $L_0=Q\rtimes_{\sigma_{t_0}}\Z$. Every nonzero power is outer, since $\ln2/\ln3$ is irrational, so Fourier coefficients prove factoriality. Amenability preserves injectivity. For the dual state $\psi$, $\sigma_T^\psi=\id$ and $\sigma_{t_0}^\psi=\operatorname{Ad}u$, where $u$ is in its centralizer. Choose bounded self-adjoint $A$ with $e^{iA}=u^*$ and put $k=e^{A/t_0}$. The perturbation by $k$ has period $t_0$. The two periodic states force $S(L_0)\subseteq\{0,1\}$. Hosting through the Fourier expectation excludes semifiniteness; hence $L_0$ is $\mathrm{III}_0$.
+
+\begin{proposition}[Injective blindness]\label{prop:blind}
+If $P$ is any injective factor with separable predual and $M$ is a factor in the hosting class of Theorem~\ref{thm:host}, every finite game hosted by $P$ is hosted by $M$. If $M$ is also injective, its hosted games are exactly those of $R_\infty$.
+\end{proposition}
+\begin{proof}
+After support reduction, $P\subset P\bar\otimes R_\infty$ is expected by $\id\otimes\rho$. Haagerup--Musat's absorption lemma \cite[Lemma 3.8]{HM} identifies that tensor product with $R_\infty$. Theorem~\ref{thm:host} and Lemma~\ref{lem:transfer} finish the transfer. Apply it in both directions for the second assertion.
+\end{proof}
+In particular no prepared-state hosting test in this injective flow-finite class reads a nontrivial ratio-membership condition. This is not a statement about every noninjective host. The consequence of $\mathrm{MIP}^*=\mathrm{RE}$ recalled in \cite{JNVWY,Tensor} gives a finite synchronous game with a perfect tracial commuting model but spatial value at most $1/2$. Central decomposition of that model preserves its finitely many zero equations on almost every factor fibre. Choose such a separable-predual finite factor $P$. It cannot be injective, since injective finite-game correlations are in $C_{qa}$. The factor $P\bar\otimes R_\infty$ is $\mathrm{III}_1$ and hosts the game through the product expectation, while $R_\infty$ cannot. Thus noninjective flow-finite hosts do separate. Conversely a positive perfect-game witness cannot force injectivity: tensor any injective host with $L(\mathbb F_2)$ and use the product expectation.
+
+\subsection{Finite shadows of the particular perfect correlation}
+Truncate binary words at length $L$, and let $t_i$ prepend a letter, killing length-$L$ words. Use the diagonal state
+\[
+ h_{a,\mu}=\frac{2^{-|\mu|}}{9(L+1)}.
+\]
+Replacing $s_i^*$ by $t_i^*$ gives exact five-dimensional blocks on the good subspace. In each copy the complement is the flag empty-word atom and the eight magic top-level atoms; its state mass is $1/(L+1)$. Complete these atoms by deterministic strategies losing just one internal cell and preserving both links. Explicitly the flag strategy always flags on rows/columns and answers $+$ on signs. For magic completions use the following row/column triples, with $T=(+,C_1)$ and $U=(+,R_1)$:
+\[
+\begin{array}{c|ccc|ccc}
+ &R_1&R_2&R_3&C_1&C_2&C_3\\\hline
+\text{designated}&+++&+++&+++&+++&+++&++-\\
+\text{other}&+++&+--&+--&+++&+--&+-+
+\end{array}
+\]
+They lose only $(R_3,C_3)$; the designated case is used precisely on atoms $j+1,j+2$. Direct substitution verifies every rule. It follows that
+\[
+ \ell_L=\frac1{27(L+1)},\quad
+ S_L=\ln9+\ln(L+1)+\tfrac L2\ln2,\quad
+ d_L=9(2^{L+1}-1).
+\]
+Convergence of scores alone is insufficient for a claim about a particular correlation. Each ideal effect is a fixed degree-one polynomial in the Cuntz letters, with $9\times9$ coefficients. Boundary corrections have vanishing state mass. The truncated moments are
+\[
+ \phi_L(t_i^*t_j)=\delta_{ij}\frac L{L+1},\qquad
+ \phi_L(t_it_j^*)=\delta_{ij}\frac L{2(L+1)},\qquad\phi_L(t_i)=0.
+\]
+Together with exact modular scaling on these shifts they give convergence of every left/right polynomial correlation. Cauchy--Schwarz removes the boundary corrections uniformly for this finite list of effects. Hence all question pairs, including weight-zero cross-copy pairs, converge to the displayed KMS correlation. This proves its membership in $C_{qa}$. Exclusion puts it outside $C_{qs}$ and proves nonattainment, while all relevant value suprema are one.

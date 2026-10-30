@@ -1,0 +1,82 @@
+\section{Fixed-state gaps and the ratio invariant}\label{sec:states}
+\begin{lemma}[Finite-game spectral obstruction]\label{lem:gap}
+Suppose a finite game forces a nonzero modular $r$-eigenoperator in every faithful normal perfect realization on every $\sigma$-finite standard-form algebra. If $r\notin\Sp\Delta_\phi$, then $v_G(M,\phi)<1$.
+\end{lemma}
+\begin{proof}
+Assume fixed-state losses tend to zero. Put all coordinate effects on $L^2(M,\phi)$ and form the Hilbert ultraproduct with constant vector $\Omega=(\xi_\phi)_\omega$. The Groh--Raynaud algebra $N$ is standard and its commutant is the ultraproduct of the commutants \cite[Theorems 3.18 and 3.22]{AH}. Coordinate effects are POVMs, and every positively weighted losing event has zero ultralimit, because its probability is bounded by total loss divided by its weight.
+
+Let $p$ be the support of $\Omega$ in $N$, $q=J_\omega pJ_\omega$, and $e=pq$. Compress \emph{both} parties to $eH_\omega$. Since $p$ commutes with Bob and $q$ with Alice, these commuting POVMs preserve all correlations. The standard compressed left algebra is the Ocneanu ultrapower and the vector state is faithful \cite[Theorem 3.7 and Corollary 3.28]{AH}. These statements do not assume arbitrary effect sequences normalize the Ocneanu ideal.
+
+Forcing in this possibly nonfactor algebra yields $x\ne0$ with modular eigenvalue $r$. Hence $x\xi_{\phi^\omega}\ne0$ is an $r$-eigenvector of its modular operator. But the constant-pair spectrum equality \cite[Corollary 4.8(3)]{AH} is
+\[
+ \Sp\Delta_{\phi^\omega}=\Sp\Delta_\phi.
+\]
+This contradicts the premise. The equality concerns spectra, not point spectra. The coordinate modular action is identified by Theorem 4.1 of the same source.
+\end{proof}
+Finiteness is essential to this compactness statement. For example, let Alice answer $n\ge1$, let Bob receive $k$ with probability $2^{-k}$ and have one answer, and accept iff $n\ge k$. Value one is approached by $n\to\infty$, while no perfect normal countably additive strategy exists even on scalars. Thus a vacuous perfect-play forcing premise for an infinite-answer game gives no spectral obstruction.
+
+Connes's state-intersection result \cite[Corollary 3.2.5(d)]{Connes} says that failure of a positive ratio in $S(M)$ is witnessed by some faithful normal state's modular spectrum. The possible extra zero for properly infinite semifinite factors is irrelevant. Lemmas~\ref{lem:bridge} and \ref{lem:gap} therefore prove necessity of $1/2\in S(M)$ for $\FMS$ and of $1/3\in S(M)$ for $\Gthree$. The same necessity holds for $\GIII$.
+
+\subsection{Sufficiency and a phase-compensated state approximation}
+We record the continuity estimate used throughout. If effects have zero loss in a normal state $\psi$, their positive loss contraction $L$ annihilates $\xi_\psi$. Keeping the effects gives
+\begin{equation}\label{eq:continuity}
+ \langle\xi_\phi,L\xi_\phi\rangle
+ \le\|\xi_\phi-\xi_\psi\|^2\le\|\phi-\psi\|.
+\end{equation}
+The last inequality is the natural-cone inequality. It also applies after the standard unitary implementer $uJuJ$ conjugates both measurement families. Nonfaithful intermediate states cause no problem: extend their support strategies by arbitrary POVMs outside the support.
+
+In type $\mathrm{III}_1$, a faithful product state on $M_5\bar\otimes N\cong M$ with marginal $\rho_r=\operatorname{diag}(1,r,r,r,r)/(1+4r)$ hosts the ideal $r=2$ or $r=3$ game. Connes--St\o rmer approximate inner homogeneity \cite{CS,Haagerup} makes its inner orbit norm dense among normal states. Formula~\eqref{eq:continuity} proves value one at every faithful normal state. For $\GIII$, Theorem~\ref{thm:host} gives a faithful hosting state by composing the expected $R_{1/2}$ state with its faithful expectation, and the same argument works.
+
+For completeness, the $\mathrm{III}_\lambda$ direction is proved using one state-orbit argument for both ratios. This is the phase-compensated spectral-state construction; a direct dual-density rounding construction gives an alternative. We use the following named imports from Haagerup--St\o rmer \cite{HS}. The spectral state
+\[
+ \widehat\eta(z)=\tau\bigl(z1_{(1,\infty)}(h_\eta)\bigr)
+\]
+on the center of one fixed continuous core classifies approximate unitary equivalence, with
+\begin{equation}\label{eq:orbit}
+ \inf_{u\in\mathcal U(M)}\|\phi-u\psi u^*\|=\|\widehat\phi-\widehat\psi\|.
+\end{equation}
+For $\mathrm{III}_\lambda$, put $L=-\ln\lambda$. Proposition 10.5 and its proof identify permitted spectral states with mixtures of translates on $\R/L\Z$ of the normalized kernel
+\[
+ K(y)=e^{-y}/(1-e^{-L}),\qquad0\le y<L,
+\]
+with norm-continuous translation. This use of a circle orientation fixes all signs below.
+
+The discrete decomposition of an existing $\mathrm{III}_\lambda$ factor is the direction of \cite[Theorem 4.4.1(b)]{Connes}. Its generalized trace $\omega$ has period $2\pi/L$ and factorial centralizer $N$ of type $\mathrm{II}_\infty$. If $e\in N$ has finite positive trace $t=\omega(e)$, the state $\psi_e(x)=\omega(exe)/t$ has a factorial $\mathrm{II}_1$ centralizer on $eMe$. Suppose $r=\lambda^{-k}$ with integer $k\ge1$. The $r$-homogeneous space is a nonzero full bimodule over the centralizer. For source and target centralizer projections of masses $a$ and $ra$, take a maximal orthogonal family of homogeneous partial isometries. KMS gives the same mass ratio for each member. If a remainder exists both remainders are nonzero; factorial comparison and fullness produce another homogeneous map between subprojections, a contradiction. The bounded strong sum has exactly the specified source and range.
+
+For $r=3$ choose a partition with masses $(1,3,3,3,3)/13$ and four such maps. Formula~\eqref{eq:block} supplies $\Gthree$. For $r=2$ the same construction supplies $\FMS$; choosing nine equal atoms and four disjoint target pairs for each supplies $\GIII$. Thus \emph{every} finite generalized-trace reduction hosts the required game.
+
+Two spectral-state identities control the approximation:
+\begin{equation}\label{eq:scaling}
+ \widehat{a\eta}=a\widehat\eta\circ\theta_{\ln a},\qquad
+ \widehat{\sum_i\eta_i}=\sum_i\widehat\eta_i\quad\text{for orthogonal supports}.
+\end{equation}
+The first follows from $h_{a\eta}=ah_\eta$, the threshold projection, and trace scaling. The second follows from orthogonality of the affiliated supports. No arbitrary affinity is asserted. Finite reductions have
+\[
+ \widehat{\psi_e}=K\circ\theta_{-\ln t}.
+\]
+Indeed $e\mapsto\tau(ze1_{(1,\infty)}(h_\omega))$ is a tracial normal weight on the factorial $N$, hence proportional to $\omega|_N$. Normalize at trace one and apply \eqref{eq:scaling}. The shape of $K$ follows from the geometric spectrum $\lambda^\Z$ in the compact modular crossed product and its trace-scaling shift; on the fundamental interval the distribution is constant before passing to logarithmic coordinates. This is also the periodic-state kernel in the proof of the cited proposition.
+
+Approximate $\widehat\phi$ in norm by a finite mixture $\sum_i a_iK\circ\theta_{b_i}$. Choose orthogonal finite projections $e_i\in N$ with traces $t_i>0$ satisfying
+\[
+ -\ln t_i+\ln a_i=b_i\pmod L.
+\]
+Any finite list of positive traces is available in $\mathrm{II}_\infty$. The block state $\psi=\sum_i a_i\psi_{e_i}$ hosts the game, and \eqref{eq:scaling} gives exactly the desired spectral mixture. The coefficient-dependent phase shift has thus been compensated. Equation~\eqref{eq:orbit}, followed by \eqref{eq:continuity}, approaches $\phi$ with hosting states and proves $v_G(M,\phi)=1$.
+
+We have proved all the asserted worst-state criteria, including
+\[
+ \vworst_{\GIII}(M)=1\iff 1/2\in S(M).
+\]
+For $r=2$ the positive sufficient subtypes are $\mathrm{III}_{2^{-1/k}}$ and $\mathrm{III}_1$; for $r=3$ they are $\mathrm{III}_{3^{-1/k}}$ and $\mathrm{III}_1$. No injectivity hypothesis enters this proof.
+
+\subsection{Two games, one-state obstruction, and algebraicity}
+If both worst-state values are one, $2$ and $3$ belong to the closed group $S(M)\setminus\{0\}$. Unique factorization makes $\ln2/\ln3$ irrational, so $\Z\ln2+\Z\ln3$ is dense. The group is all $\R_{>0}$, and $M$ is $\mathrm{III}_1$. The converse was proved by homogeneity. In fact the two-game conclusion needs only the fixed-state obstruction and the $\mathrm{III}_1$ argument, independently of the more involved $\mathrm{III}_\lambda$ approximation.
+
+Nevertheless the faithful density $\rho_2\otimes\rho_3$ on $M_{25}$ wins both games after purification, by playing each on its own tensor factor. Its eigenvalues are $1,2,3,6$ divided by 117, with multiplicities $1,4,4,16$. Here $S(M_{25})=\{1\}$. The two-game property quantifies separately over game, state and accuracy; neither common measurements nor a common flag are required. A finite set of preparations cannot establish that premise.
+
+\begin{proposition}[Limited algebraicity]\label{prop:alg}
+If a finite binary-scoring game has a finite-dimensional perfect strategy and universally forces a fixed modular ratio $r$, then $r$ is algebraic.
+\end{proposition}
+\begin{proof}
+Fix dimensions in which perfection occurs and purify after a finite enlargement. Real and imaginary coordinates for the vector and POVMs, positive factorizations $E=C^*C$, normalization, completeness and zero losing probabilities form a finite existential system over $\Q$. Only the support of the question distribution matters. The real algebraic numbers form a real closed subfield, so real-closed-field transfer gives an algebraic solution. The forced ratio is not inserted as a coefficient of this system. The reduced density has algebraic entries and algebraic nonzero eigenvalues. On faithful support its type-I modular eigenvalues are ratios of these eigenvalues. Universal forcing applies to this algebraic realization, so $r$ is algebraic.
+\end{proof}
+This does not settle algebraicity when all perfect realizations require infinite dimension. Harris's minimal exact-embezzling-factor algebraicity theorem has different hypotheses \cite{Harris}. A finite noncommutative presentation alone supplies no finite-dimensional real-closed-field argument.

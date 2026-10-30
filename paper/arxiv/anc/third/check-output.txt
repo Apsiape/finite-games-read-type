@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "questions": [
+    9,
+    9
+  ],
+  "answers_per_question": 5,
+  "question_pairs": 81,
+  "events_checked": 2025,
+  "forbidden_events": 732,
+  "exact_loss_Qsqrt3": [
+    "0",
+    "0"
+  ],
+  "normalization": "all 81 pairs exactly 1",
+  "nonnegativity": "all 2025 probabilities exact nonnegative",
+  "pvm_error_float": 1.0007415106216802e-16,
+  "o3_moment_max_error_float": 2.7755575615628914e-17,
+  "original_fms_loss_float": -1.2698943767194593e-19,
+  "coordinate_answer_labels": [
+    "+++",
+    "-+-",
+    "+--",
+    "--+"
+  ],
+  "ray_rigidity": [
+    {
+      "ray": 0,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "--+"
+        ],
+        [
+          "C1",
+          "+++"
+        ],
+        [
+          "C2",
+          "-+-"
+        ],
+        [
+          "C3",
+          "+-+"
+        ]
+      ],
+      "span_rank": 3
+    },
+    {
+      "ray": 1,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "+--"
+        ],
+        [
+          "C1",
+          "+--"
+        ],
+        [
+          "C2",
+          "+++"
+        ],
+        [
+          "C3",
+          "-++"
+        ]
+      ],
+      "span_rank": 3
+    },
+    {
+      "ray": 2,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "+++"
+        ],
+        [
+          "C1",
+          "--+"
+        ],
+        [
+          "C2",
+          "--+"
+        ],
+        [
+          "C3",
+          "---"
+        ]
+      ],
+      "span_rank": 3
+    },
+    {
+      "ray": 3,
+      "orthogonal_old_answers": [
+        [
+          "R2",
+          "-+-"
+        ],
+        [
+          "C1",
+          "-+-"
+        ],
+        [
+          "C2",
+          "+--"
+        ],
+        [
+          "C3",
+          "++-"
+        ]
+      ],
+      "span_rank": 3
+    }
+  ],
+  "peak_working_set_MB": 74.18359375,
+  "seconds": 0.5601826999336481,
+  "scope": "Exact finite probabilities plus independent O_3 KMS moments; not a numerical proof of modular extraction."
+}

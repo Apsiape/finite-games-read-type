@@ -1,0 +1,92 @@
+{
+ "C1_fms_predicate_matches_enumerated": true,
+ "C1_pairs": 25,
+ "C2_ideal_max_forbidden_prob": 3.469446951953614e-18,
+ "C2_pvm_err": 2.220446049250313e-16,
+ "C2_R2plus_is_00_corner_err": 0.0,
+ "C3_pairs": 243,
+ "C5": {
+  "ok": true,
+  "cover": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "perron": 1.9999999999999996,
+  "primitive_power": 8
+ },
+ "C4": [
+  {
+   "L": 1,
+   "dim": 27,
+   "loss": 0.018518518518518524,
+   "predicted_loss": 0.018518518518518517,
+   "loss_by_kind": {
+    "copy": 0.018518518518518524,
+    "link1": 0.0,
+    "link2": 0.0
+   },
+   "entropy_nats": 3.2369453481761377,
+   "predicted_entropy": 3.2369453481761377,
+   "eig_err": 0.0,
+   "block_err": 0.0,
+   "completeness_err": 2.220446049250313e-16
+  },
+  {
+   "L": 2,
+   "dim": 63,
+   "loss": 0.012345679012345682,
+   "predicted_loss": 0.012345679012345678,
+   "loss_by_kind": {
+    "copy": 0.012345679012345682,
+    "link1": 0.0,
+    "link2": 0.0
+   },
+   "entropy_nats": 3.9889840465642736,
+   "predicted_entropy": 3.9889840465642745,
+   "eig_err": 0.0,
+   "block_err": 0.0,
+   "completeness_err": 2.220446049250313e-16
+  },
+  {
+   "L": 3,
+   "dim": 135,
+   "loss": 0.009259259259259262,
+   "predicted_loss": 0.009259259259259259,
+   "loss_by_kind": {
+    "copy": 0.009259259259259262,
+    "link1": 0.0,
+    "link2": 0.0
+   },
+   "entropy_nats": 4.623239709296026,
+   "predicted_entropy": 4.623239709296028,
+   "eig_err": 0.0,
+   "block_err": 0.0,
+   "completeness_err": 2.220446049250313e-16
+  },
+  {
+   "L": 4,
+   "dim": 279,
+   "loss": 0.007407407407407407,
+   "predicted_loss": 0.007407407407407408,
+   "loss_by_kind": {
+    "copy": 0.007407407407407407,
+    "link1": 0.0,
+    "link2": 0.0
+   },
+   "entropy_nats": 5.19295685089021,
+   "predicted_entropy": 5.19295685089021,
+   "eig_err": 0.0,
+   "block_err": 0.0,
+   "completeness_err": 2.220446049250313e-16
+  }
+ ],
+ "C6_rank": 7,
+ "C6_unknowns": 7
+}

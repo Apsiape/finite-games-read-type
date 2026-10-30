@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "games": [
+    {
+      "ratio": "10",
+      "status": "PASS",
+      "questions": 13,
+      "pairs": 169,
+      "events": 4225,
+      "forbidden": 1638,
+      "added_bases": 5,
+      "all_PVMs_exact": true,
+      "all_forbidden_amplitudes_zero": true,
+      "all_pair_totals_one": true
+    },
+    {
+      "ratio": "25/4",
+      "status": "PASS",
+      "questions": 17,
+      "pairs": 289,
+      "events": 7225,
+      "forbidden": 2902,
+      "added_bases": 9,
+      "all_PVMs_exact": true,
+      "all_forbidden_amplitudes_zero": true,
+      "all_pair_totals_one": true
+    },
+    {
+      "ratio": "3",
+      "status": "PASS",
+      "questions": 9,
+      "pairs": 81,
+      "events": 2025,
+      "forbidden": 732,
+      "added_bases": 1,
+      "all_PVMs_exact": true,
+      "all_forbidden_amplitudes_zero": true,
+      "all_pair_totals_one": true
+    },
+    {
+      "ratio": "5/2",
+      "status": "PASS",
+      "questions": 13,
+      "pairs": 169,
+      "events": 4225,
+      "forbidden": 1638,
+      "added_bases": 5,
+      "all_PVMs_exact": true,
+      "all_forbidden_amplitudes_zero": true,
+      "all_pair_totals_one": true
+    },
+    {
+      "ratio": "6",
+      "status": "PASS",
+      "questions": 9,
+      "pairs": 81,
+      "events": 2025,
+      "forbidden": 732,
+      "added_bases": 1,
+      "all_PVMs_exact": true,
+      "all_forbidden_amplitudes_zero": true,
+      "all_pair_totals_one": true
+    },
+    {
+      "ratio": "7",
+      "status": "PASS",
+      "questions": 13,
+      "pairs": 169,
+      "events": 4225,
+      "forbidden": 1642,
+      "added_bases": 5,
+      "all_PVMs_exact": true,
+      "all_forbidden_amplitudes_zero": true,
+      "all_pair_totals_one": true
+    }
+  ]
+}

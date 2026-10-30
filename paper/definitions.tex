@@ -1,0 +1,83 @@
+\section{Definitions and main results}\label{sec:definitions}
+A finite game is a tuple $G=(X,Y,(A_x),(B_y),\pi,V)$ with finite nonempty question and answer sets, a probability distribution $\pi$ on $X\times Y$, and a predicate $V(a,b\mid x,y)\in\{0,1\}$. Its loss is
+\[
+ \ell_G=\sum_{x,y,a,b}\pi(x,y)(1-V(a,b\mid x,y))p(a,b\mid x,y).
+\]
+Only pairs of positive question weight matter to perfection. A normal commuting strategy consists of commuting positive operator valued measurements (POVMs) and a state whose marginal on the specified ambient von Neumann algebra is normal. Mixed states and larger commuting partners are allowed.
+
+For a faithful normal state $\phi$ on a $\sigma$-finite von Neumann algebra $M$, use its standard form $(M,L^2(M),J,\mathcal P)$ and natural-cone vector $\xi_\phi$. Alice's effects lie in $M$ and Bob's in $M'=JMJ$. Write
+\[
+ p(a,b\mid x,y)=\langle\xi_\phi,A_a^xB_b^y\xi_\phi\rangle,
+ \qquad v_G(M,\phi)=\sup_{A,B}(1-\ell_G).
+\]
+\emph{Hosting} means existence of a normal state and a perfect strategy with the standard commutant as partner. A nonfaithful state is interpreted on its support corner. For factors define
+\[
+ \vworst_G(M)=\inf_{\phi\text{ faithful normal}}v_G(M,\phi).
+\]
+Thus $\vworst_G(M)=1$ means that for every faithful normal state and every accuracy there are suitable measurements. Measurements may depend on both. It does not assert perfect attainment at that state.
+
+For a faithful state, $M_\phi$ is its centralizer and $\sigma^\phi$ its modular group. An $r$-eigenoperator is a nonzero bounded $x$ with $\sigma_t^\phi(x)=r^{it}x$. Connes's invariant $S(M)$ is the intersection of modular spectra over faithful normal semifinite weights. Its positive part is a closed multiplicative subgroup; for countably decomposable factors the intersection over faithful normal \emph{states} has the same positive part \cite{Connes}. For semifinite factors that part is $\{1\}$; for type $\mathrm{III}_\lambda$, $0<\lambda<1$, it is $\lambda^\Z$; and for type $\mathrm{III}_1$ it is $\R_{>0}$. Type $\mathrm{III}_0$ has $S(M)=\{0,1\}$.
+
+For local dimensions at most $d$ on both sides, $\omega_d(G)$ denotes the supremum winning probability over spatial POVM strategies, including mixed states. Let $D_G(\eps)$ be the smallest such $d$ permitting loss at most $\eps$.
+
+The flow of weights is the dual action $\theta$ on the center of the continuous core $M\rtimes_{\sigma^\phi}\R$. We use the convention $\theta_s(h)=e^{-s}h$ and $\tau\circ\theta_s=e^{-s}\tau$. An expected subfactor is the range of a faithful normal conditional expectation. Write $R_\lambda$ for the injective type $\mathrm{III}_\lambda$ factor and $R_\infty$ for the injective type $\mathrm{III}_1$ factor, with separable predual.
+
+\begin{theorem}[Finite-game hosting]\label{thm:host}
+The game $\GIII$ defined below has 45 Alice questions, 46 Bob questions, at most nine answers, and 243 uniformly sampled pairs. It has a perfect normal strategy on $R_{1/2}$. No perfect strategy has a normal marginal on a semifinite ambient algebra of either party. For every factor $M$ with separable predual, the following are equivalent:
+\begin{enumerate}
+\item $M$ hosts $\GIII$;
+\item $M$ contains an expected copy of $R_{1/2}$;
+\item its flow of weights has an invariant normal state;
+\item $M$ contains an expected copy of $R_\infty$.
+\end{enumerate}
+The displayed perfect correlation belongs to $C_{qa}$, the closure of finite-dimensional spatial correlations, but has no normal semifinite realization.
+\end{theorem}
+The game and exclusion are proved in Section~\ref{sec:games}; the expected-subfactor and flow equivalences in Section~\ref{sec:hosting}. The analytic equivalence between expected embeddings and invariant flow states is Haagerup--Musat's theorem, not a new structure theorem here.
+
+\begin{theorem}[Two finite state-response tests]\label{thm:two}
+For every factor $M$ with separable predual,
+\[
+ \vworst_{\FMS}(M)=1\iff 1/2\in S(M),\qquad
+ \vworst_{\Gthree}(M)=1\iff 1/3\in S(M).
+\]
+Consequently every faithful normal state has value one for both games if and only if $M$ is type $\mathrm{III}_1$.
+\end{theorem}
+Here $\FMS$ has five questions per party, while $\Gthree$ has nine per party and five answers per question. Section~\ref{sec:states} proves the theorem. A faithful state on $M_{25}$ wins both games perfectly. The universal-state premise therefore cannot be replaced by one preparation, even with exact scores.
+
+\begin{theorem}[Rational ratio forcing]\label{thm:ratio-summary}
+Every $r\in\Q_{>0}$ is forced by some finite binary-scoring game admitting a finite-dimensional perfect strategy: every perfect normal strategy has a nonzero modular $r$-eigenoperator after support reduction. On the binary magic-square core every rational ray of $\R^4$ is finitely forceable. The distinguished parameters of rational orthogonal-pair single bridges are exactly $\{2+x^2+y^2:x,y\in\Q\}$.
+\end{theorem}
+Section~\ref{sec:ratios} proves these statements, supplies six explicit games, and states the arithmetic restrictions with their construction hypotheses. Existence of a game forcing each rational does not prescribe every rational Schmidt spectrum or classify all finite-game distinctions.
+
+\begin{theorem}[Robustness and dimension]\label{thm:price}
+For a normal semifinite strategy of $\GIII$ with density $h$, let $p(t)=\mu_t(h)$ be its decreasing singular-value function, normalized by $\int p=1$. Put
+\[
+ H(h)^2=\int_0^\infty\bigl(\sqrt{p(t)}-\sqrt{2p(2t)}\bigr)^2\,dt.
+\]
+Theorem 7.2 of the companion paper \cite{Base} supplies a universal finite constant $C_F$. There is a universal constant
+\[
+ C_R=\frac{243}{8}(C_F^2+4552),
+\]
+such that $H(h)^2\le C_R\ell_{\GIII}$. It holds for either normal semifinite marginal, mixed strategies and POVMs. As $\eps\downarrow0$, the minimum local dimension satisfies
+\[
+ D_{\GIII}(\eps)=\exp\bigl(\Theta(\eps^{-1/2})\bigr),\qquad
+ 1-\omega_d(\GIII)=\Theta((\ln d)^{-2}).
+\]
+The optimized type-I marginal entropy and normalized finite-factor deficit have exponent $1/2$; sorted log trace-position and log-density variances have exponent $1$. The exponents match explicit constructions, not their leading constants.
+\end{theorem}
+Section~\ref{sec:prices} specifies each resource and proves these statements. No validated numerical constant is given; the sharp constant is conjectural.
+
+\begin{theorem}[Type and dimension cost]\label{thm:phase-summary}
+There are finite rational games of minimum host class II with polynomial cost, exponential cost, and a quantum value gap. Every $\Delta^0_2$ exponent in $[1/2,1]$ occurs as an existing log-dimension exponent of a type-III-only game with quantum value one. Every positive finite existing exponent is $\Delta^0_2$. Type-III-only hosting is d.r.e.-hard; its intersection with quantum value one is $\Pi^0_2$-hard as an unpromised language.
+\end{theorem}
+Section~\ref{sec:phase} proves these claims using published quantitative games, a sharp matrix rank/defect bound and explicit AND/OR constructions. The universal relation between type and dimension cost and the exact arithmetical classification remain open.
+
+\paragraph{Prior work and the contribution.}
+The flagged magic-square gadget and frustrated-overlap principle are due to Man\v cinska \cite{FMS}; the conference geometry is classical \cite{Conference}. Four-dimensional Kochen--Specker configurations provide earlier context \cite{Cabello}. Connes's classification, state-orbit theory, and modular expectations provide the analytic tools \cite{Connes,CS,HS,Takesaki}. Exact Cuntz mechanisms and operational readings of type through embezzlement precede this work \cite{Harris,VLSWW}. The contribution is the particular finite-game equivalences, the rational-ray and ratio-forcing theorems, and the robust gluing law for $\GIII$. No earlier version of these precise finite-game statements was found in the bounded comparison of the cited literature; this is not an exhaustive priority claim. The authors' companion work supplies the base game and robust sector estimate \cite{Base}; their other public dimension witnesses already have faster-growing dimension requirements \cite{Explicit,Precision}.
+
+\begin{lemma}[Normal support reduction]\label{lem:support}
+Every normal-marginal commuting strategy can be represented on the faithful standard form of its support corner, preserving all correlations.
+\end{lemma}
+\begin{proof}
+Purify the joint state into a commuting extension or use its joint GNS representation. If $p$ is the marginal support, then $p\psi=\psi$ and Bob commutes with $p$, so $A$ can be replaced by $pAp$. On $M=pNp$ the map $x\xi_\phi\mapsto x\psi$ extends to an isometry onto $\overline{M\psi}$. This subspace reduces $M$. Compression of Bob's effects by the isometry gives POVMs in $M'$, even if Bob originally failed to preserve that cyclic subspace. The compressed marginal is faithful and normal. Semifiniteness passes to the corner.
+\end{proof}

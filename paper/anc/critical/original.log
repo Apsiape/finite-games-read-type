@@ -1,0 +1,9 @@
+C1 FMS predicate vs game.json copy one: True pairs: 25
+C2 ideal FMS max forbidden prob: 3.469446951953614e-18  PVM err: 2.220446049250313e-16  R2(+++)=|00> corner err: 0.0
+C3 G_III supported pairs: 243
+C5 atom design ok: True cover: [2, 2, 2, 2, 2, 2, 2, 2, 2] Perron: 1.9999999999999996 primitive at power: 8
+C4 {'L': 1, 'dim': 27, 'loss': 0.018518518518518524, 'predicted_loss': 0.018518518518518517, 'loss_by_kind': {'copy': 0.018518518518518524, 'link1': 0.0, 'link2': 0.0}, 'entropy_nats': 3.2369453481761377, 'predicted_entropy': 3.2369453481761377, 'eig_err': np.float64(0.0), 'block_err': 0.0, 'completeness_err': np.float64(2.220446049250313e-16)}
+C4 {'L': 2, 'dim': 63, 'loss': 0.012345679012345682, 'predicted_loss': 0.012345679012345678, 'loss_by_kind': {'copy': 0.012345679012345682, 'link1': 0.0, 'link2': 0.0}, 'entropy_nats': 3.9889840465642736, 'predicted_entropy': 3.9889840465642745, 'eig_err': np.float64(0.0), 'block_err': 0.0, 'completeness_err': np.float64(2.220446049250313e-16)}
+C4 {'L': 3, 'dim': 135, 'loss': 0.009259259259259262, 'predicted_loss': 0.009259259259259259, 'loss_by_kind': {'copy': 0.009259259259259262, 'link1': 0.0, 'link2': 0.0}, 'entropy_nats': 4.623239709296026, 'predicted_entropy': 4.623239709296028, 'eig_err': np.float64(0.0), 'block_err': 0.0, 'completeness_err': np.float64(2.220446049250313e-16)}
+C4 {'L': 4, 'dim': 279, 'loss': 0.007407407407407407, 'predicted_loss': 0.007407407407407408, 'loss_by_kind': {'copy': 0.007407407407407407, 'link1': 0.0, 'link2': 0.0}, 'entropy_nats': 5.19295685089021, 'predicted_entropy': 5.19295685089021, 'eig_err': np.float64(0.0), 'block_err': 0.0, 'completeness_err': np.float64(2.220446049250313e-16)}
+C6 halving-invariance system rank 7 of 7 unknowns (full rank => only zero solution)

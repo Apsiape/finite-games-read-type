@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "critical/original.py",
+      "status": "PASS",
+      "seconds": 8.836,
+      "peak_bytes": 140668928,
+      "cpu_count": 1
+    },
+    {
+      "check": "critical/independent.py",
+      "status": "PASS",
+      "seconds": 7.335,
+      "peak_bytes": 151109632,
+      "cpu_count": 1
+    },
+    {
+      "check": "states/fixed_state_fms.py",
+      "status": "PASS",
+      "seconds": 5.629,
+      "peak_bytes": 544747520,
+      "cpu_count": 1
+    },
+    {
+      "check": "states/independent.py",
+      "status": "PASS",
+      "seconds": 2.617,
+      "peak_bytes": 128217088,
+      "cpu_count": 1
+    },
+    {
+      "check": "third/original.py",
+      "status": "PASS",
+      "seconds": 1.612,
+      "peak_bytes": 77737984,
+      "cpu_count": 1
+    },
+    {
+      "check": "third/independent.py",
+      "status": "PASS",
+      "seconds": 2.716,
+      "peak_bytes": 118747136,
+      "cpu_count": 1
+    },
+    {
+      "check": "prices/price_checks.py",
+      "status": "PASS",
+      "seconds": 1.213,
+      "peak_bytes": 80121856,
+      "cpu_count": 1
+    },
+    {
+      "check": "prices/independent.py",
+      "status": "PASS",
+      "seconds": 1.684,
+      "peak_bytes": 77926400,
+      "cpu_count": 1
+    },
+    {
+      "check": "robust/original.py",
+      "status": "PASS",
+      "seconds": 53.82,
+      "peak_bytes": 497381376,
+      "cpu_count": 1
+    },
+    {
+      "check": "robust/airy.py",
+      "status": "PASS",
+      "seconds": 1.211,
+      "peak_bytes": 92909568,
+      "cpu_count": 1
+    },
+    {
+      "check": "robust/independent.py",
+      "status": "PASS",
+      "seconds": 1.212,
+      "peak_bytes": 77189120,
+      "cpu_count": 1
+    },
+    {
+      "check": "ratios/check_games.py",
+      "status": "PASS",
+      "seconds": 1.913,
+      "peak_bytes": 79863808,
+      "cpu_count": 1
+    },
+    {
+      "check": "ratios/check_geometry.py",
+      "status": "PASS",
+      "seconds": 1.211,
+      "peak_bytes": 77004800,
+      "cpu_count": 1
+    },
+    {
+      "check": "phase/check_phase.py",
+      "status": "PASS",
+      "seconds": 1.211,
+      "peak_bytes": 76312576,
+      "cpu_count": 1
+    }
+  ]
+}
