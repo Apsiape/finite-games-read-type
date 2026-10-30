@@ -3,6 +3,7 @@ message: Please cite the paper; this distribution supplies its source and finite
 type: software
 title: "Finite games that read the type of a von Neumann algebra"
 version: 1.0.0
+doi: "10.5281/zenodo.23787124"
 date-released: '2026-10-29'
 license:
 - CC-BY-4.0
@@ -24,4 +25,5 @@ preferred-citation:
     given-names: Nidhal
   year: 2026
   version: 1.0.0
+  doi: "10.5281/zenodo.23787124"
   notes: 'Preprint. Text: CC BY 4.0. Scripts: MIT or Apache 2.0; see RIGHTS.md.'
